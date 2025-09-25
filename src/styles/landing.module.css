@@ -1,0 +1,62 @@
+.container{
+  position: relative;
+  width: 100%;
+}
+
+.sharkImage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  max-height: 500px;
+  margin: 0 auto;
+}
+
+.sharkImage img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.sharkAnimation {
+  animation: sharkAnimation 10s infinite;
+}
+
+@keyframes sharkAnimation {
+  100% {
+      transform: rotate(0deg);
+  }
+  25% {
+      transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+}
+
+
+.bg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.clublogo{
+  position: absolute;
+  bottom: 3%;
+  left: 110px;
+  z-index: 5;
+  opacity: 0.8;
+  width: 200px;
+  height: auto;
+}
+
+
+
+
