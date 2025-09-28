@@ -6,7 +6,7 @@ export const Layout = ({ children, showOverlay, setShowOverlay }:any) => {
       {/* <NavBar showOverlay={showOverlay} setShowOverlay={setShowOverlay}/> */}
       {/* <Landing/> */}
       <main>{children}</main>
-      <Footer />
+      {/*<Footer />*/}
     </>
   )
 }

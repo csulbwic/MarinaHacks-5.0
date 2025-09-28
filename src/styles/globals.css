@@ -108,8 +108,9 @@ body {
   
 }
 
+/* background: linear-gradient(135deg, #fce5d4 40%, #bae4db 90%); */
 body {
-  background: linear-gradient(135deg, #fce5d4 40%, #bae4db 90%);
+  background: linear-gradient(180deg, #ffd5f9 40%, #ef7cbe 90%);
   min-height: 100vh;
   margin: 0;
   padding: 0;

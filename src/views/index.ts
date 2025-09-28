@@ -6,3 +6,4 @@ export { Prizes } from './Prizes';
 export { Team } from './Team';
 export { Pillars } from './Pillars';
 export { Sponsors } from './Sponsors';
+export { Teaser } from './Teaser';
