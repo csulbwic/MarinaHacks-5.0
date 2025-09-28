@@ -16,7 +16,7 @@ export const Teaser = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-base sm:text-lg md:text-xl font-bold tracking-tight text-white drop-shadow"
         >
-          Something's in the water...
+          Something&apos;s in the water...
         </motion.h1>
 
         <motion.h2
