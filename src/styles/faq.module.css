@@ -31,11 +31,12 @@
 .questionBox{
     background: #FBACCC;
     /* color: #5A4157; */
-    padding: 0;
     border-radius: 20px;
     margin-top: 0.3rem;
     margin-bottom: 0.75rem;
+    padding-right: 7px;
     box-shadow: 0 15px 0 0 #EFC0D1; 
+    padding-bottom: 0%;
 
 }
 
@@ -46,9 +47,20 @@
 
 .answerBox{
     /* background-color: lightcoral; */
-    margin: 0.5rem 0rem;
+    margin: 0;  /* took off the margin because it gave extra space below the <button> making the image not align with the text*/
     text-align: left;
     padding-bottom: 10px; 
+}
+
+/* added this for the star image on the faqs to not be big --> the image led to the faq box expandng */
+.faqStar {
+    /* display: inline-block; */
+    width: 75px;     /* Adjust this number to make it smaller or larger */
+    height: 75px ; 
+    object-fit: contain; /* Prevent stretching */
+    /* padding-top: 1.25rem;
+    padding-right: 7px; */
+    
 }
 
 

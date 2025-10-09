@@ -19,7 +19,7 @@ export const Faq = () => {
     <div id="faq" className= {`flex flex-col justify-center items-center ${style.faqContainer}`}>
       
       {/* Headline */}
-      <h1 className="text-7xl text-center font-extrabold text-[#FBACCC] mb-5 mt-20 font-nunito [text-shadow:2px_4px_0_rgba(0,0,0,0.25)]">
+      <h1 className="text-4xl text-center font-extrabold text-[#FBACCC] mb-5 mt-20 font-nunito [text-shadow:2px_4px_0_rgba(0,0,0,0.25)]">
         Frequently Asked Questions
       </h1>
 
@@ -38,11 +38,11 @@ export const Faq = () => {
                 className="flex items-center w-full justify-between "
                 onClick={() => toggleActive(index)}
               >
-                <span className="text-4xl font-extrabold text-[#FCE4D8] text-left pl-10 pr-10 font-nunito pt-7">
+                <span className="text-xl font-extrabold text-[#FCE4D8] text-left pl-10 font-nunito pt-4">
                   {item.question}
                 </span>
                 <img src="/images/faqStar.png" alt="Faq star"
-                  className={`pt-7 transition-transform transform ${
+                  className={`${style.faqStar} transition-transform transform ${
                     activeIndex === index ? "rotate-180" : ""
                   }`}
                 />
@@ -52,7 +52,7 @@ export const Faq = () => {
                   activeIndex === index ? "max-h-96" : "max-h-0"
                 }`}
               >
-                <p className="px-12 pt-6 text-4xl font-bold text-[#FCE4D8] font-nunito">{item.answer}</p>
+                <p className="px-12 pt-6 text-xl font-bold text-[#FCE4D8] font-nunito">{item.answer}</p>
               </div>
             </div>
           ))}
