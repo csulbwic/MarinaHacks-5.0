@@ -20,7 +20,7 @@ module.exports = {
       fontDarkBlue : '#47C2FF',
       
       fontFamily: {
-        sans: ["Poppins", "sans-serif"],
+        nunito: ['Nunito', 'sans-serif'],
       },
       screens: {
         sm: "640px",

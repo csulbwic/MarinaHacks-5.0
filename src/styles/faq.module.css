@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
 .faqContainer {
     /* background-color: blue; */
     padding-left: 10%;
@@ -14,7 +16,7 @@
     max-width: 1280px;
     padding-left: 5rem;
     padding-right: 5rem;
-    background: #D8D3FF;
+    /* background: #D8D3FF; */
     color: #5A4157;
     padding: 3rem;
     border-radius: 50px;
@@ -27,23 +29,26 @@
 
 
 .questionBox{
-    /* background-color: lightgreen; */
-    padding-bottom: 50px;
-    color: #5A4157;
-    padding: 1.50rem;
+    background: #FBACCC;
+    /* color: #5A4157; */
+    padding: 0;
     border-radius: 20px;
-    margin-top: 0.2rem;
+    margin-top: 0.3rem;
     margin-bottom: 0.75rem;
+    box-shadow: 0 15px 0 0 #EFC0D1; 
+
 }
 
 .questionBoxActive{
-    background-color: white;
+    background: linear-gradient(to top, #EFC0D1 5%, #FBACCC 50% 70%); /* bottom → top */
+    /* box-shadow: 0 6px 0 0 #F5B0C3; */
 }
 
 .answerBox{
     /* background-color: lightcoral; */
     margin: 0.5rem 0rem;
     text-align: left;
+    padding-bottom: 10px; 
 }
 
 
