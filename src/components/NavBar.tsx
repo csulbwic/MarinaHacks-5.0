@@ -1,67 +1,43 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '@/styles/nav.module.css';
 import React from 'react';
-import UserPanel from './UserPanel';
 
-/* Component for nav responsive */
-import { IoMenu } from "react-icons/io5";
-import { BiMenuAltRight } from "react-icons/bi";
+
 
 export const NavBar = ({ showOverlay, setShowOverlay }: any) => {
+  const navLogoSize = 200;
 
-  const [toggleMenu, setToggleMenu] = React.useState(false);
+  const navButtons = [
+    { label: "About", href: "/#about" },
+    { label: "Teams", href: "/#teams" },
+    { label: "FAQ", href: "/#faq" },
+    { label: "Contacts", href: "/#contacts" }
+  ]
 
   return (
-    <div className={` ${styles.NavbarContainerOutside} ${styles.sticky} navbar-container space-x-8`}>
+    <div className={`flex w-full h-auto justify-between items-center fixed top-0 navbar-container z-10`}>
+      <div className="hidden md:block items-center justify-center select-none">
+        <Image
+          src="/images/navlogo.png"
+          alt='MarinaHacks 4.0 Logo'
+          width={navLogoSize}
+          height={navLogoSize}
+        />
+      </div>
 
-      <Image
-        src="/images/logos_4.0/short_logo_4.0.png"
-        alt='MarinaHacks 4.0 Logo'
-        width={150}
-        height={150}
-      />
-
-      {/* Navigation Bar */}
-      <nav className={`${styles.nav} bg-mhsky font-bold text-fontDarkBlue shadow-lg`}>
-        <div className={`${styles.containerNav} navbar flex justify-between items-center`}>
-          
-          
-          <ul className=".navbar-links flex items-center justify-between space-x-6">
-            <li className={` ${styles.ulist} rounded`}><Link href="/portallogin">Portal</Link></li>
-            <li className={` ${styles.ulist} rounded`}><Link href="/#info">Info</Link></li>
-            <li className={` ${styles.ulist} rounded`}><Link href="/#application">Application</Link></li>
-            <li className={` ${styles.ulist} rounded`}><Link href="/#team">Teams</Link></li>
-            <li className={` ${styles.ulist} rounded`}><Link href="/#pillars">Pillars</Link></li>
-            <li className={` ${styles.ulist} rounded`}><Link href="/#prizes">Prizes</Link></li>
-            <li className={` ${styles.ulist} rounded`}><Link href="/#ideagen">Project Idea Generator</Link></li>
-            <li className={` ${styles.ulist} rounded`}><Link href="/#faq">FAQ</Link></li>
-            <li className={` ${styles.ulist} rounded`}><Link href="/#contact">Contact</Link></li>
+      {/* adjust height of navbar on this parent div. you can change it to see how it affects the size of the buttons, etc. to fine tune it if you want */}
+      <div className={`hidden md:block flex-1 px-5 h-[50px]`}>
+        <nav className={`font-bold shadow-md bg-gradient-to-r from-navtransition1 via-navtransition2 to-navtransition3 rounded-full p-2 justify-center items-center flex h-full`}>
+          <ul className="flex items-center justify-between gap-6 w-full h-full">
+            {navButtons.map((button, index) => (
+              <li key={index} className="flex-1 text-white h-full select-none">
+                <Link className="bg-navbtn w-full rounded-full h-full flex justify-center items-center" href={button.href}>{button.label}</Link>
+              </li>
+            ))}
           </ul>
-        </div>
 
-        {/* Small screen view with Hamburger Menu */}
-        <div className={`${styles.navbarSmallscreen}`}>
-          <IoMenu color ="000" fontSize={27} cursor={'pointer'} onClick={() => setToggleMenu(true)}></IoMenu>
-
-          {toggleMenu &&(
-            <div className={`${styles.navbarSmallscreenOverlay}`}>
-            <BiMenuAltRight color ="000" fontSize={30} className={`${styles.navbarSmallscreenOverlayOverlayClose}`} onClick={() => setToggleMenu(false)}></BiMenuAltRight>
-            <ul className={`${styles.navbarSmallscreenLinks}`}>
-                <li className={` ${styles.navbarSmallscreenLinksUlist} rounded`}><Link href="/portallogin">Portal</Link></li>
-                <li className={` ${styles.navbarSmallscreenLinksUlist} rounded`}><Link href="/#info">Info</Link></li>
-                <li className={` ${styles.navbarSmallscreenLinksUlist} rounded`}><Link href="/#application">Application</Link></li>
-                <li className={` ${styles.navbarSmallscreenLinksUlist} rounded`}><Link href="/#team">Teams</Link></li>
-                <li className={` ${styles.navbarSmallscreenLinksUlist} rounded`}><Link href="/#pillars">Pillars</Link></li>
-                <li className={` ${styles.navbarSmallscreenLinksUlist} rounded`}><Link href="/#prizes">Prizes</Link></li>
-                <li className={` ${styles.navbarSmallscreenLinksUlist} rounded`}><Link href="/#ideagen">Project Generator</Link></li>
-                <li className={` ${styles.navbarSmallscreenLinksUlist} rounded`}><Link href="/#faq">FAQ</Link></li>
-                <li className={` ${styles.navbarSmallscreenLinksUlist} rounded`}><Link href="/#contact">Contact</Link></li>
-              </ul>
-            </div>
-          )}
-        </div>
-      </nav>
+        </nav>
+      </div>
     </div>
   );
 };
