@@ -1,10 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '@/styles/nav.module.css';
-import { useState, useEffect } from 'react';
 import React from 'react';
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from '../../firebase';
 import UserPanel from './UserPanel';
 
 /* Component for nav responsive */
@@ -14,19 +11,6 @@ import { BiMenuAltRight } from "react-icons/bi";
 export const NavBar = ({ showOverlay, setShowOverlay }: any) => {
 
   const [toggleMenu, setToggleMenu] = React.useState(false);
-  const [user, setUser] = React.useState<any>(null); // State for storing user info
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
-      } else {
-        setUser(null);
-      }
-    });
-
-    return () => unsubscribe();
-  }, []);
 
   return (
     <div className={` ${styles.NavbarContainerOutside} ${styles.sticky} navbar-container space-x-8`}>
@@ -78,13 +62,6 @@ export const NavBar = ({ showOverlay, setShowOverlay }: any) => {
           )}
         </div>
       </nav>
-
-      {/* Side User Panel */}
-      {user && (
-        <div className={`${styles.userPanelSide}`}>
-          <UserPanel user={user} />
-        </div>
-      )}
     </div>
   );
 };
