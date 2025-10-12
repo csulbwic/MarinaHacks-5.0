@@ -14,11 +14,7 @@ const DATA: Pillar[] = [
     description:
       "to the project that has the best entertainment product (music, gaming, art, food, culture, outdoor activities, physical activities, fashion, and beauty)!",
   },
-  {
-    title: "Best UI/UX",
-    description:
-      "best project with the most intuitive, user-friendly, and interface design!",
-  },
+ 
   {
     title: "Best Technical",
     description:
