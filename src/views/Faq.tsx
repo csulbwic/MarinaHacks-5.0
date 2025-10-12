@@ -19,7 +19,7 @@ export const Faq = () => {
     <div id="faq" className= {`flex flex-col justify-center items-center ${style.faqContainer}`}>
       
       {/* Headline */}
-      <h1 className="text-4xl text-center font-extrabold text-[#FBACCC] mb-5 mt-20 font-nunito [text-shadow:2px_4px_0_rgba(0,0,0,0.25)]">
+      <h1 className="text-6xl text-center font-extrabold text-[#FBACCC] mb-5 mt-20 font-nunito [text-shadow:2px_4px_0_rgba(0,0,0,0.25)]">
         Frequently Asked Questions
       </h1>
 
