@@ -4,8 +4,9 @@ import React from 'react';
 
 
 
-export const NavBar = ({ showOverlay, setShowOverlay }: any) => {
+export const NavBar = () => {
   const navLogoSize = 200;
+  const navLogoSizeMobile = 150;
 
   const navButtons = [
     { label: "About", href: "/#about" },
@@ -38,12 +39,25 @@ export const NavBar = ({ showOverlay, setShowOverlay }: any) => {
             </ul>
 
           </nav>
-        </div>  
+        </div>
       </div>
 
       {/* hamburger navbar */}
-      <div className="md:hidden flex">
-        <div>Hamburger</div>
+      <div className="md:hidden flex border border-red-500">
+        <div className="flex-1 px-5 h-[50px] border border-blue-500">
+          <button>Hamburger Button</button>
+          <nav className=" hidden font-bold shadow-md bg-gradient-to-r from-navtransition1 via-navtransition2 to-navtransition3 rounded-full p-2 justify-center items-center flex h-full">
+            
+          </nav>
+        </div>
+
+        <Image
+          className='border border-green-500'
+          src="/images/navlogo.png"
+          alt='MarinaHacks 4.0 Logo'
+          width={navLogoSizeMobile}
+          height={navLogoSizeMobile}
+        />
       </div>
 
     </div>
