@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 export const NavBar = () => {
   const navLogoSize = 200;
@@ -11,6 +11,7 @@ export const NavBar = () => {
   const [hamburgerHeight, setHamburgerHeight] = useState(50);
   const [hamburgerWidth, setHamburgerWidth] = useState(50);
   const [showMenu, setShowMenu] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const navButtons = [
     { label: "About", href: "/#about" },
@@ -19,11 +20,31 @@ export const NavBar = () => {
     { label: "Contacts", href: "/#contacts" }
   ]
 
-  const handleHamburger = () => {
+  const openHamburger = () => {
     setHamburgerHeight(hamburgerHeight === 50 ? hamburgerMaxHeight : 50);
     setHamburgerWidth(hamburgerWidth === 50 ? hamburgerMaxWidth : 50);
     setShowMenu(!showMenu);
+  };
+
+  const resetHamburger = () => {
+    setHamburgerHeight(50);
+    setHamburgerWidth(50);
+    setShowMenu(false);
   }
+
+
+  useEffect(() => {
+    if (!showMenu) return;
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        resetHamburger();
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showMenu]);
 
   return (
     <div className="w-full h-auto fixed top-0 z-10">
@@ -54,13 +75,17 @@ export const NavBar = () => {
 
       {/* hamburger navbar */}
       <div className="md:hidden flex border border-red-500 flex-row justify-between">
-        <div style={{ height: `${hamburgerHeight}px`, width: `${hamburgerWidth}px`, borderRadius: showMenu ? '25px' : '100%' }} className="ml-[10px] mt-[10px] px-5 border border-blue-500 bg-gradient-to-b from-navtransition1 via-navtransition2 to-navtransition3 transition-all duration-300 ease-in-out overflow-hidden flex flex-col">
-          <button className='absolute left-[10px] top-[22.5px] w-[50px] border border-black z-10' onClick={handleHamburger}>Button</button>
+        <div
+          ref={menuRef}
+          style={{ height: `${hamburgerHeight}px`, width: `${hamburgerWidth}px`, borderRadius: showMenu ? '25px' : '100%' }}
+          className="ml-[10px] mt-[10px] px-5 border border-blue-500 bg-gradient-to-b from-navtransition1 via-navtransition2 to-navtransition3 transition-all duration-300 ease-in-out overflow-hidden flex flex-col"
+        >
+          <button style={{ opacity: showMenu ? 0 : 1, pointerEvents: showMenu ? 'none' : 'auto' }} className='absolute left-[10px] top-[22.5px] w-[50px] border border-black z-10 transition-all duration-[150ms] delay-[75ms] ease-in-out' onClick={openHamburger}>Button</button>
 
           <ul className="flex flex-col justify-around flex-1 border border-red-400">
             {navButtons.map((button, index) => (
               <li key={index} style={{ opacity: showMenu ? 1 : 0 }} className="transition-all duration-[200ms] ease-in-out delay-[100ms] text-white select-none flex-none">
-                <Link className="bg-navbtn w-full rounded-full w-full flex justify-center items-center" href={button.href}>{button.label}</Link>
+                <Link onClick={resetHamburger} className="bg-navbtn w-full rounded-full w-full flex justify-center items-center" href={button.href}>{button.label}</Link>
               </li>
             ))}
           </ul>
