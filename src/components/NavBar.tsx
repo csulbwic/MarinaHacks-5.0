@@ -64,7 +64,7 @@ export const NavBar = () => {
           <nav className="font-bold shadow-md bg-gradient-to-r from-navtransition1 via-navtransition2 to-navtransition3 rounded-full p-2 justify-center items-center flex h-full">
             <ul className="flex items-center justify-between gap-6 w-full h-full">
               {navButtons.map((button, index) => (
-                <li key={index} className="flex-1 text-navtext h-full select-none">
+                <li key={index} className="rounded-full flex-1 text-navtext h-full select-none shadow-md">
                   <Link className="bg-navbtn w-full rounded-full h-full flex justify-center items-center" href={button.href}>{button.label}</Link>
                 </li>
               ))}
