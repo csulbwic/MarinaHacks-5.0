@@ -1,62 +1,122 @@
-.container{
+/* Page section wrapper */
+.landing {
   position: relative;
-  width: 100%;
+  isolation: isolate;
+  min-height: clamp(560px, 80vh, 920px);
+  --next-blue: #DFF9FF; /* match the next section */
+  background: linear-gradient(180deg, #FCE4D8 0%, var(--next-blue) 100%);
+  display: grid;
+  place-items: center;
+  overflow: visible; /* allow waves to flow past the bottom */
 }
 
-.sharkImage {
+.waves {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.waves::before,
+.waves::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* subtle drop shadows can stay baked in the SVGs;
+     backgrounds avoid the viewBox clipping seam */
+}
+/* Back wave */
+.waves::before {
+  top: 36%;          /* raise/lower crest */
+  bottom: -24%;      /* extra room so trough isn’t cut */
+  z-index: 0;
+  background-image: url("/images/Vector_Wave.svg");
+  background-position: center 34%;
+}
+
+/* Front wave */
+.waves::after {
+  top: 46%;
+  bottom: -28%;
+  z-index: 1;        /* above back wave, below hero */
+  background-image: url("/images/Vector_Wave_front.svg");
+  background-position: center 40%;
+}
+
+
+
+/* DECORATIVE ICONS */
+.decStarLeft,
+.decStarRight,
+.decShell {
+  position: absolute;
+  z-index: 2;
+  opacity: 0.9;
+  user-select: none;
+  pointer-events: none;
+}
+
+.decStarLeft {
+  left: 6%;
+  top: 28%;
+  width: 88px;
+  transform: rotate(-10deg);
+}
+
+.decStarRight {
+  right: 14%;
+  top: 32%;
+  width: 74px;
+}
+
+.decShell {
+  right: 24%;
+  top: 16%;
+  width: 54px;
+}
+
+/* HERO */
+.hero { z-index: 3; text-align: center; display: grid; gap: 10px; align-items: center; justify-items: center; }
+
+
+.logoWrap {
+  width: 520px;
+  height: 520px;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 500px;
-  max-height: 500px;
-  margin: 0 auto;
+  filter: drop-shadow(0 10px 16px rgba(251, 172, 204, 0.25));
 }
 
-.sharkImage img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+@keyframes floatY {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+.logoFloat {
+  animation: floatY 5.5s ease-in-out infinite;
 }
 
-.sharkAnimation {
-  animation: sharkAnimation 10s infinite;
+/* Countdown slot if/when you add it */
+.countdownWrap {
+  margin-top: 6px;
+}
+.bottomBlend { display: none; }
+
+
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .logoWrap { width: 420px; height: 420px; }
+  .decStarLeft { left: 4%; top: 30%; width: 70px; }
+  .decStarRight { right: 10%; top: 34%; width: 62px; }
+  .decShell { right: 18%; top: 18%; width: 46px; }
 }
 
-@keyframes sharkAnimation {
-  100% {
-      transform: rotate(0deg);
-  }
-  25% {
-      transform: rotate(10deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-10deg);
-  }
+@media (max-width: 640px) {
+  .landing { min-height: 70vh; }
+  .logoWrap { width: 300px; height: 300px; }
+  .decStarLeft, .decStarRight, .decShell { display: none; }
+  .waveBack { top: 55%; }
 }
-
-
-.bg {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-}
-
-.clublogo{
-  position: absolute;
-  bottom: 3%;
-  left: 110px;
-  z-index: 5;
-  opacity: 0.8;
-  width: 200px;
-  height: auto;
-}
-
-
-
-
