@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export const NavBar = () => {
   const navLogoSize = 200;
@@ -63,7 +64,7 @@ export const NavBar = () => {
           <nav className="font-bold shadow-md bg-gradient-to-r from-navtransition1 via-navtransition2 to-navtransition3 rounded-full p-2 justify-center items-center flex h-full">
             <ul className="flex items-center justify-between gap-6 w-full h-full">
               {navButtons.map((button, index) => (
-                <li key={index} className="flex-1 text-white h-full select-none">
+                <li key={index} className="flex-1 text-navtext h-full select-none">
                   <Link className="bg-navbtn w-full rounded-full h-full flex justify-center items-center" href={button.href}>{button.label}</Link>
                 </li>
               ))}
@@ -74,25 +75,31 @@ export const NavBar = () => {
       </div>
 
       {/* hamburger navbar */}
-      <div className="md:hidden flex border border-red-500 flex-row justify-between">
+      <div className="md:hidden flex flex-row justify-between">
         <div
           ref={menuRef}
           style={{ height: `${hamburgerHeight}px`, width: `${hamburgerWidth}px`, borderRadius: showMenu ? '25px' : '100%' }}
-          className="ml-[10px] mt-[10px] px-5 border border-blue-500 bg-gradient-to-b from-navtransition1 via-navtransition2 to-navtransition3 transition-all duration-300 ease-in-out overflow-hidden flex flex-col"
+          className="shadow-md relative ml-[10px] mt-[10px] px-5 bg-gradient-to-b from-navtransition1 via-navtransition2 to-navtransition3 transition-all duration-300 ease-in-out overflow-hidden flex flex-col"
         >
-          <button style={{ opacity: showMenu ? 0 : 1, pointerEvents: showMenu ? 'none' : 'auto' }} className='absolute left-[10px] top-[22.5px] w-[50px] border border-black z-10 transition-all duration-[150ms] delay-[75ms] ease-in-out' onClick={openHamburger}>Button</button>
+          <button
+            style={{ opacity: showMenu ? 0 : 1, pointerEvents: showMenu ? 'none' : 'auto' }}
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-[50px] h-[50px] z-10 transition-all duration-[150ms] delay-[0ms] ease-in-out"
+            onClick={openHamburger}
+          >
+            <GiHamburgerMenu size={30} color="#FBACCC" />
+          </button>
 
-          <ul className="flex flex-col justify-around flex-1 border border-red-400">
+          <ul className="flex flex-col justify-around flex-1">
             {navButtons.map((button, index) => (
-              <li key={index} style={{ opacity: showMenu ? 1 : 0 }} className="transition-all duration-[200ms] ease-in-out delay-[100ms] text-white select-none flex-none">
-                <Link onClick={resetHamburger} className="bg-navbtn w-full rounded-full w-full flex justify-center items-center" href={button.href}>{button.label}</Link>
+              <li key={index} style={{ opacity: showMenu ? 1 : 0 }} className="rounded-full transition-all duration-[200ms] ease-in-out delay-[50ms] font-bold text-navtext select-none flex-none shadow-md">
+                <Link onClick={resetHamburger} className="rounded-full bg-navbtn w-full w-full flex justify-center items-center" href={button.href}>{button.label}</Link>
               </li>
             ))}
           </ul>
 
         </div>
 
-        <div className="border border-green-500 flex-none">
+        <div className="flex-none">
           <Image
             src="/images/navlogo.png"
             alt="MarinaHacks 4.0 Logo"

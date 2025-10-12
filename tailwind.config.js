@@ -19,7 +19,8 @@ module.exports = {
         navtransition1: "hsla(242, 62%, 91%, 1)",
         navtransition2: "hsla(191, 100%, 94%, 1)",
         navtransition3: "hsla(310, 69%, 90%, 1)",
-        navbtn: "hsla(336, 91%, 83%, 1)"
+        navbtn: "hsla(336, 91%, 83%, 1)",
+        navtext: "hsla(20, 86%, 92%, 1)"
       },
       fontDarkBlue : '#47C2FF',
       
