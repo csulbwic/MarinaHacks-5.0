@@ -24,11 +24,10 @@ module.exports = {
         waveBottom: "#DFF9FF",
         brandPink: "#FBACCC",
       },
-      keyframes: {
-        floatY: {
-          "0%,100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-12px)" },
-        },
+      fontDarkBlue : '#47C2FF',
+      
+      fontFamily: {
+        nunito: ['Nunito', 'sans-serif'],
       },
       animation: {
         float: "floatY 5.5s ease-in-out infinite",

@@ -1,14 +1,16 @@
 import Image from "next/image";
-import { CountdownTimer } from "@/components/CountdownTimer"; 
+import { CountdownTimer } from "@/components/CountdownTimer";
 
 export default function Landing() {
   return (
-    <section className="
+    <section
+      className="
       relative grid place-items-center min-h-[80vh]
       overflow-hidden                      /* clip anything past the bottom */
       pb-[14vw] md:pb-[10vw] lg:pb-[8vw]   /* leave space for the wave depth */
       bg-gradient-to-b from-[#FCE4D8] to-[#DFF9FF]
-    ">
+    "
+    >
       <div aria-hidden className="absolute inset-0 z-0 pointer-events-none">
         <div
           className="
@@ -72,7 +74,7 @@ export default function Landing() {
 
         {/* Timer slightly above logo for overlap, but still low overall */}
         <div className="z-[3] -mt-2 md:-mt-3">
-          <CountdownTimer />
+          <CountdownTimer targetDate="2025-10-25T10:00:00" />
         </div>
       </div>
     </section>
