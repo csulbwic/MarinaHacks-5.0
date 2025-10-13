@@ -110,23 +110,12 @@ body {
 
 /* background: linear-gradient(135deg, #fce5d4 40%, #bae4db 90%); */
 body {
-  background: linear-gradient(180deg, #ffd5f9 40%, #ef7cbe 90%);
+  background: #DFF9FF;
   min-height: 100vh;
   margin: 0;
   padding: 0;
 }
 
-body:before{
-  content: '';
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: -1;
-  background: #FAEADA;
-}
 
 a {
   color: inherit;
@@ -170,4 +159,37 @@ a {
 
 #ideagen {
   scroll-margin-top: 170px; 
+}
+
+@layer utilities {
+  /* gentle bob+sway */
+  @keyframes sway-more {
+    0%   { transform: translateY(0) rotate(0deg) }
+    25%  { transform: translateY(12px) rotate(4deg) }
+    50%  { transform: translateY(-14px) rotate(-6deg) }
+    75%  { transform: translateY(10px) rotate(3deg) }
+    100% { transform: translateY(0) rotate(0deg) }
+  }
+  
+  /* helpers: regular, reverse, and extra-slow */
+  .sway-more         { animation: sway-more 6s ease-in-out infinite; }
+  .sway-more-rev     { animation: sway-more 6s ease-in-out infinite reverse; }
+  .sway-more-slow    { animation: sway-more 8s ease-in-out infinite; }
+  
+  /* make the motion feel like it “hinges” from the object */
+  .sway-origin-bottom { transform-origin: 50% 100%; }  /* starfish on sand */
+  .sway-origin-top    { transform-origin: 50% 0%; }    /* shell near top */
+
+  @keyframes wave-sway {
+    0%,100% { transform: translateY(0) }
+    25%     { transform: translateY(6px) }
+    50%     { transform: translateY(-8px) }
+    75%     { transform: translateY(4px) }
+  }
+  
+  /* helpers (optional) */
+  .waves-sway       { animation: wave-sway 16s ease-in-out infinite; }
+  .waves-sway-slow  { animation: wave-sway 20s ease-in-out infinite; }
+  .waves-sway-rev   { animation: wave-sway 16s ease-in-out infinite reverse; }
+  
 }
