@@ -16,7 +16,7 @@ export const Landing = () => {
         />
       </div>
       <div className="pb-15">
-        <CountdownTimer targetDate="2024-10-26T11:00:00" />
+        <CountdownTimer targetDate="2025-10-25T10:00:00" />
       </div>
     </div>
   )

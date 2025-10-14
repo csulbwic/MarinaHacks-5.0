@@ -1,8 +1,8 @@
 export const questions = [
   {
-    question: "When is MarinaHacks 4.0 event?",
+    question: "When is MarinaHacks 5.0?",
     answer:
-      "MarinaHacks 4.0 will take place from 10:00 AM Saturday, October 26th, 2024 to 3:00 PM Sunday, October 27th, 2024!",
+      "MarinaHacks 5.0 will take place from 10:00 AM Saturday, October 25th, 2025 to 3:00 PM Sunday, October 26th, 2025!",
   },
   {
     question: "What takes place at MarinaHacks?",
