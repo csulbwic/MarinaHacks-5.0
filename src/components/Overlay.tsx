@@ -25,7 +25,6 @@ export const OverlayLayout = ({ children }: any) => {
 
   return (
     <>
-      <NavBar showOverlay={showOverlay} setShowOverlay={setShowOverlay} />
       {showOverlay && (
         <div className="h-screen w-full bg-blue-200 flex justify-center items-center">
           {/*<Image

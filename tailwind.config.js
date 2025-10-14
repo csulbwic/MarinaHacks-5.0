@@ -23,9 +23,8 @@ module.exports = {
         waveTop: "#FCE4D8",
         waveBottom: "#DFF9FF",
         brandPink: "#FBACCC",
+        foreground: "#625F5F",
       },
-      fontDarkBlue : '#47C2FF',
-      
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],
       },
