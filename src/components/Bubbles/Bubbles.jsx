@@ -42,8 +42,10 @@ const Bubbles = () => {
         height: "100%",
         zIndex: 0,
         pointerEvents: "none",
-        opacity: 0.7
+        opacity: 0.6,
+        filter: "blur(0.5px)"
       }}
+      className="animate-pulse"
     />
   );
 };

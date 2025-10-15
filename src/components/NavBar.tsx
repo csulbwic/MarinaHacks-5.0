@@ -29,62 +29,172 @@ export const NavBar = ({ showOverlay, setShowOverlay }: any) => {
   }, []);
 
   return (
-    <div className={` ${styles.NavbarContainerOutside} ${styles.sticky} navbar-container space-x-8`}>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-lg border-b border-white/20">
+      <div className="mx-auto max-w-7xl px-4">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex items-center space-x-4">
+            <Link href="/" className="flex items-center space-x-2 group">
+              <Image
+                src="/images/logos_4.0/short_logo_4.0.png"
+                alt='MarinaHacks 5.0 Logo'
+                width={40}
+                height={40}
+                className="group-hover:scale-110 transition-transform duration-300"
+              />
+              <span className="text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+                MarinaHacks 5.0
+              </span>
+            </Link>
+          </div>
 
-      <Image
-        src="/images/logos_4.0/short_logo_4.0.png"
-        alt='MarinaHacks 4.0 Logo'
-        width={150}
-        height={150}
-      />
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-1">
+            <Link 
+              href="/portallogin" 
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-all duration-200"
+            >
+              Portal
+            </Link>
+            <Link 
+              href="/#info" 
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-all duration-200"
+            >
+              Info
+            </Link>
+            <Link 
+              href="/#application" 
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-all duration-200"
+            >
+              Application
+            </Link>
+            <Link 
+              href="/#team" 
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-all duration-200"
+            >
+              Team
+            </Link>
+            <Link 
+              href="/#pillars" 
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-all duration-200"
+            >
+              Pillars
+            </Link>
+            <Link 
+              href="/#prizes" 
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-all duration-200"
+            >
+              Prizes
+            </Link>
+            <Link 
+              href="/#ideagen" 
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-all duration-200"
+            >
+              Ideas
+            </Link>
+            <Link 
+              href="/#faq" 
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-all duration-200"
+            >
+              FAQ
+            </Link>
+            <Link 
+              href="/#contact" 
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-all duration-200"
+            >
+              Contact
+            </Link>
+          </div>
 
-      {/* Navigation Bar */}
-      <nav className={`${styles.nav} bg-mhsky font-bold text-fontDarkBlue shadow-lg`}>
-        <div className={`${styles.containerNav} navbar flex justify-between items-center`}>
-          
-          
-          <ul className=".navbar-links flex items-center justify-between space-x-6">
-            <li className={` ${styles.ulist} rounded`}><Link href="/portallogin">Portal</Link></li>
-            <li className={` ${styles.ulist} rounded`}><Link href="/#info">Info</Link></li>
-            <li className={` ${styles.ulist} rounded`}><Link href="/#application">Application</Link></li>
-            <li className={` ${styles.ulist} rounded`}><Link href="/#team">Teams</Link></li>
-            <li className={` ${styles.ulist} rounded`}><Link href="/#pillars">Pillars</Link></li>
-            <li className={` ${styles.ulist} rounded`}><Link href="/#prizes">Prizes</Link></li>
-            <li className={` ${styles.ulist} rounded`}><Link href="/#ideagen">Project Idea Generator</Link></li>
-            <li className={` ${styles.ulist} rounded`}><Link href="/#faq">FAQ</Link></li>
-            <li className={` ${styles.ulist} rounded`}><Link href="/#contact">Contact</Link></li>
-          </ul>
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setToggleMenu(!toggleMenu)}
+              className="p-2 rounded-lg text-gray-700 hover:text-pink-600 hover:bg-pink-50 transition-all duration-200"
+            >
+              <IoMenu className="h-6 w-6" />
+            </button>
+          </div>
         </div>
 
-        {/* Small screen view with Hamburger Menu */}
-        <div className={`${styles.navbarSmallscreen}`}>
-          <IoMenu color ="000" fontSize={27} cursor={'pointer'} onClick={() => setToggleMenu(true)}></IoMenu>
-
-          {toggleMenu &&(
-            <div className={`${styles.navbarSmallscreenOverlay}`}>
-            <BiMenuAltRight color ="000" fontSize={30} className={`${styles.navbarSmallscreenOverlayOverlayClose}`} onClick={() => setToggleMenu(false)}></BiMenuAltRight>
-            <ul className={`${styles.navbarSmallscreenLinks}`}>
-                <li className={` ${styles.navbarSmallscreenLinksUlist} rounded`}><Link href="/portallogin">Portal</Link></li>
-                <li className={` ${styles.navbarSmallscreenLinksUlist} rounded`}><Link href="/#info">Info</Link></li>
-                <li className={` ${styles.navbarSmallscreenLinksUlist} rounded`}><Link href="/#application">Application</Link></li>
-                <li className={` ${styles.navbarSmallscreenLinksUlist} rounded`}><Link href="/#team">Teams</Link></li>
-                <li className={` ${styles.navbarSmallscreenLinksUlist} rounded`}><Link href="/#pillars">Pillars</Link></li>
-                <li className={` ${styles.navbarSmallscreenLinksUlist} rounded`}><Link href="/#prizes">Prizes</Link></li>
-                <li className={` ${styles.navbarSmallscreenLinksUlist} rounded`}><Link href="/#ideagen">Project Generator</Link></li>
-                <li className={` ${styles.navbarSmallscreenLinksUlist} rounded`}><Link href="/#faq">FAQ</Link></li>
-                <li className={` ${styles.navbarSmallscreenLinksUlist} rounded`}><Link href="/#contact">Contact</Link></li>
-              </ul>
+        {/* Mobile Navigation Menu */}
+        {toggleMenu && (
+          <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-white/20 shadow-lg">
+            <div className="px-4 py-2 space-y-1">
+              <Link 
+                href="/portallogin" 
+                className="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-all duration-200"
+                onClick={() => setToggleMenu(false)}
+              >
+                Portal
+              </Link>
+              <Link 
+                href="/#info" 
+                className="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-all duration-200"
+                onClick={() => setToggleMenu(false)}
+              >
+                Info
+              </Link>
+              <Link 
+                href="/#application" 
+                className="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-all duration-200"
+                onClick={() => setToggleMenu(false)}
+              >
+                Application
+              </Link>
+              <Link 
+                href="/#team" 
+                className="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-all duration-200"
+                onClick={() => setToggleMenu(false)}
+              >
+                Team
+              </Link>
+              <Link 
+                href="/#pillars" 
+                className="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-all duration-200"
+                onClick={() => setToggleMenu(false)}
+              >
+                Pillars
+              </Link>
+              <Link 
+                href="/#prizes" 
+                className="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-all duration-200"
+                onClick={() => setToggleMenu(false)}
+              >
+                Prizes
+              </Link>
+              <Link 
+                href="/#ideagen" 
+                className="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-all duration-200"
+                onClick={() => setToggleMenu(false)}
+              >
+                Ideas
+              </Link>
+              <Link 
+                href="/#faq" 
+                className="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-all duration-200"
+                onClick={() => setToggleMenu(false)}
+              >
+                FAQ
+              </Link>
+              <Link 
+                href="/#contact" 
+                className="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-all duration-200"
+                onClick={() => setToggleMenu(false)}
+              >
+                Contact
+              </Link>
             </div>
-          )}
-        </div>
-      </nav>
+          </div>
+        )}
+      </div>
 
       {/* Side User Panel */}
       {user && (
-        <div className={`${styles.userPanelSide}`}>
+        <div className="fixed top-4 right-4 z-50">
           <UserPanel user={user} />
         </div>
       )}
-    </div>
+    </nav>
   );
 };
