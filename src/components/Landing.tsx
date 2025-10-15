@@ -5,8 +5,10 @@ export default function Landing() {
   return (
     <section className="
       relative grid place-items-center min-h-[80vh]
-      overflow-hidden                      /* clip anything past the bottom */
-      pb-[14vw] md:pb-[10vw] lg:pb-[8vw]   /* leave space for the wave depth */
+      overflow-hidden
+      pt-28 md:pt-32            /* <-- add space under navbar */
+      scroll-mt-28 md:scroll-mt-32  /* <-- anchors land below navbar */
+      pb-[14vw] md:pb-[10vw] lg:pb-[8vw]
       bg-gradient-to-b from-[#FCE4D8] to-[#DFF9FF]
     ">
       <div aria-hidden className="absolute inset-0 z-0 pointer-events-none">
