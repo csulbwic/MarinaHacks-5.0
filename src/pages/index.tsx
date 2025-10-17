@@ -7,7 +7,13 @@ export default function Home() {
   return (
     <div>
       <Bubbles />
-      <Teaser />
+<Landing />
+<Info />
+<Team />
+<Pillars />
+<Prizes/>
+<Faq />
+<Contact />
     </div>
   )
 }
@@ -16,11 +22,9 @@ export default function Home() {
 <Bubbles />
 <Landing />
 <Info />
-<Application />
 <Team />
 <Pillars />
 <Prizes/>
-<IdeaGen />
 <Faq />
 <Contact />
 */
