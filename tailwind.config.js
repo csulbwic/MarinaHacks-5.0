@@ -19,13 +19,14 @@ module.exports = {
         navtransition2: "hsla(191, 100%, 94%, 1)",
         navtransition3: "hsla(310, 69%, 90%, 1)",
         navbtn: "hsla(336, 91%, 83%, 1)",
-        navtext: "hsla(20, 86%, 92%, 1)"
+        navtext: "hsla(20, 86%, 92%, 1)",
+        waveTop: "#FCE4D8",
+        waveBottom: "#DFF9FF",
+        brandPink: "#FBACCC",
+        foreground: "#625F5F",
       },
-      keyframes: {
-        floatY: {
-          "0%,100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-12px)" },
-        },
+      fontFamily: {
+        nunito: ['Nunito', 'sans-serif'],
       },
       animation: {
         float: "floatY 5.5s ease-in-out infinite",

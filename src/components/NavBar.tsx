@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { useEffect, useRef, useState } from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import React, { useEffect, useRef, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 export const NavBar = () => {
@@ -18,8 +18,8 @@ export const NavBar = () => {
     { label: "About", href: "/#about" },
     { label: "Teams", href: "/#teams" },
     { label: "FAQ", href: "/#faq" },
-    { label: "Contacts", href: "/#contacts" }
-  ]
+    { label: "Contacts", href: "/#contacts" },
+  ];
 
   const openHamburger = () => {
     setHamburgerHeight(hamburgerHeight === 50 ? hamburgerMaxHeight : 50);
@@ -31,8 +31,7 @@ export const NavBar = () => {
     setHamburgerHeight(50);
     setHamburgerWidth(50);
     setShowMenu(false);
-  }
-
+  };
 
   useEffect(() => {
     if (!showMenu) return;
@@ -41,20 +40,19 @@ export const NavBar = () => {
         resetHamburger();
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [showMenu]);
 
   return (
     <div className="w-full h-auto fixed top-0 z-10">
-
       {/* full size navbar */}
       <div className="hidden md:flex w-full h-full justify-between items-center">
         <Image
           src="/images/navlogo.png"
-          alt='MarinaHacks 4.0 Logo'
+          alt="MarinaHacks 4.0 Logo"
           width={navLogoSize}
           height={navLogoSize}
         />
@@ -64,12 +62,19 @@ export const NavBar = () => {
           <nav className="font-bold shadow-md bg-gradient-to-r from-navtransition1 via-navtransition2 to-navtransition3 rounded-full p-2 justify-center items-center flex h-full">
             <ul className="flex items-center justify-between gap-6 w-full h-full">
               {navButtons.map((button, index) => (
-                <li key={index} className="rounded-full flex-1 text-navtext h-full select-none shadow-md">
-                  <Link className="bg-navbtn w-full rounded-full h-full flex justify-center items-center" href={button.href}>{button.label}</Link>
+                <li
+                  key={index}
+                  className="rounded-full flex-1 text-navtext h-full select-none shadow-md"
+                >
+                  <Link
+                    className="bg-navbtn w-full rounded-full h-full flex justify-center items-center"
+                    href={button.href}
+                  >
+                    {button.label}
+                  </Link>
                 </li>
               ))}
             </ul>
-
           </nav>
         </div>
       </div>
@@ -78,11 +83,18 @@ export const NavBar = () => {
       <div className="md:hidden flex flex-row justify-between">
         <div
           ref={menuRef}
-          style={{ height: `${hamburgerHeight}px`, width: `${hamburgerWidth}px`, borderRadius: showMenu ? '25px' : '100%' }}
+          style={{
+            height: `${hamburgerHeight}px`,
+            width: `${hamburgerWidth}px`,
+            borderRadius: showMenu ? "25px" : "100%",
+          }}
           className="shadow-md relative ml-[10px] mt-[10px] px-5 bg-gradient-to-b from-navtransition1 via-navtransition2 to-navtransition3 transition-all duration-300 ease-in-out overflow-hidden flex flex-col"
         >
           <button
-            style={{ opacity: showMenu ? 0 : 1, pointerEvents: showMenu ? 'none' : 'auto' }}
+            style={{
+              opacity: showMenu ? 0 : 1,
+              pointerEvents: showMenu ? "none" : "auto",
+            }}
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-[50px] h-[50px] z-10 transition-all duration-[150ms] delay-[0ms] ease-in-out"
             onClick={openHamburger}
           >
@@ -91,12 +103,21 @@ export const NavBar = () => {
 
           <ul className="flex flex-col justify-around flex-1">
             {navButtons.map((button, index) => (
-              <li key={index} style={{ opacity: showMenu ? 1 : 0 }} className="rounded-full transition-all duration-[200ms] ease-in-out delay-[50ms] font-bold text-navtext select-none flex-none shadow-md">
-                <Link onClick={resetHamburger} className="rounded-full bg-navbtn w-full w-full flex justify-center items-center" href={button.href}>{button.label}</Link>
+              <li
+                key={index}
+                style={{ opacity: showMenu ? 1 : 0 }}
+                className="rounded-full transition-all duration-[200ms] ease-in-out delay-[50ms] font-bold text-navtext select-none flex-none shadow-md"
+              >
+                <Link
+                  onClick={resetHamburger}
+                  className="rounded-full bg-navbtn w-full flex justify-center items-center"
+                  href={button.href}
+                >
+                  {button.label}
+                </Link>
               </li>
             ))}
           </ul>
-
         </div>
 
         <div className="flex-none">
@@ -108,7 +129,6 @@ export const NavBar = () => {
           />
         </div>
       </div>
-
     </div>
   );
 };
