@@ -3,22 +3,22 @@ import React from "react";
 type Pillar = { title: string; description: string };
 
 const DATA: Pillar[] = [
-  { title: "Hacker's Favorite", description: "most memorable and favorite project!" },
+  { title: "Hacker's Favorite", description: "Most memorable and favorite project!" },
   {
     title: "Best Social Goods",
     description:
-      "to the project that focuses the best on addressing social issues such as climate change, renewable energy, waste reduction, and sustainable practices!",
+      "To the project that focuses the best on addressing social issues such as climate change, renewable energy, waste reduction, and sustainable practices!",
   },
   {
     title: "Best Entertainment",
     description:
-      "to the project that has the best entertainment product (music, gaming, art, food, culture, outdoor activities, physical activities, fashion, and beauty)!",
+      "To the project that has the best entertainment product (music, gaming, art, food, culture, outdoor activities, physical activities, fashion, and beauty)!",
   },
  
   {
     title: "Best Technical",
     description:
-      "best project for the most advanced, challenging, and difficulty in implementation!",
+      "Best project for the most advanced, challenging, and difficulty in implementation!",
   },
 ];
 
@@ -72,7 +72,7 @@ export const Pillars = () => {
                   px-8 py-8
                 "
               >
-                <p className="text-center font-bold text-[15px] leading-7 text-[#B3B3B3]">
+                <p className="text-center font-bold text-[17px] leading-7 text-[#B3B3B3]">
                   {p.description}
                 </p>
               </div>
