@@ -1,53 +1,85 @@
-import styles from "../styles/pillars.module.css"
-import React from 'react';
+import React from "react";
+
+type Pillar = { title: string; description: string };
+
+const DATA: Pillar[] = [
+  { title: "Hacker's Favorite", description: "most memorable and favorite project!" },
+  {
+    title: "Best Social Goods",
+    description:
+      "to the project that focuses the best on addressing social issues such as climate change, renewable energy, waste reduction, and sustainable practices!",
+  },
+  {
+    title: "Best Entertainment",
+    description:
+      "to the project that has the best entertainment product (music, gaming, art, food, culture, outdoor activities, physical activities, fashion, and beauty)!",
+  },
+ 
+  {
+    title: "Best Technical",
+    description:
+      "best project for the most advanced, challenging, and difficulty in implementation!",
+  },
+];
+
+// exact ribbon colors (in order)
+const HEADER = ["#F7D3F1", "#DAD9F6", "#EFC0D1", "#FBACCC"];
 
 export const Pillars = () => {
   return (
-    <>
-    <div id="pillars" className={styles.pillarsContainer}>
-      <div className="flex justify-center items-center">
-        <h1 className="text-6xl font-extrabold text-[#46494C] mb-20">
+    <section
+      id="pillars"
+      className="bg-[#DFF9FF] pt-28 md:pt-36 pb-24 scroll-mt-28 md:scroll-mt-36"
+    >
+      {/* Section title */}
+      <div className="mx-auto max-w-5xl px-6">
+        <h2 className="text-center text-5xl md:text-6xl font-extrabold text-[#46494C] mb-12">
           Pillars
-        </h1>
+        </h2>
+
+        {/* Stacked list */}
+        <div className="flex flex-col items-center space-y-12">
+          {DATA.map((p, i) => (
+            <div key={p.title} className="w-full flex flex-col items-center">
+              {/* Ribbon (on top) */}
+              <div
+                className="
+                  relative z-10
+                  w-[92%] md:w-[88%] lg:w-[84%]
+                  rounded-2xl
+                  shadow-[0_6px_0_rgba(0,0,0,0.08)]
+                  ring-1 ring-black/5
+                  text-center
+                "
+                style={{ background: HEADER[i % HEADER.length] }}
+              >
+                <div className="py-5">
+                  {/* if you want white uppercase like the prototype, swap the color & add uppercase */}
+                  <h3 className="text-white uppercase tracking-[0.08em] text-[18px] sm:text-[20px] md:text-[22px] font-extrabold">
+                    {p.title}
+                  </h3>
+                </div>
+              </div>
+
+              {/* Card under the ribbon (slightly tucked underneath) */}
+              <div
+                className="
+                  relative z-0
+                  w-[86%] md:w-[82%] lg:w-[78%]
+                  -mt-4              /* <-- pulls the white card up, under the ribbon */
+                  rounded-2xl bg-white
+                  shadow-lg ring-1 ring-black/5
+                  px-8 py-8
+                "
+              >
+                <p className="text-center font-bold text-[15px] leading-7 text-[#B3B3B3]">
+                  {p.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-        
-        {[
-          {
-            title: "Hacker's Favorite",
-            description: "most memorable and favorite project!"
-          },
-          {
-            title: "Best Social Goods",
-            description: "to the project that focuses the best on addressing social issues such as climate change, renewable energy, waste reduction, and sustainable practices!"
-          },
-          {
-            title: "Best Entertainment",
-            description: "to the project that has the best entertainment product (music, gaming, art, food, culture, outdoor activities, physical activities, fashion, and beauty)!"
-          },
-          {
-            title: "Best UI/UX",
-            description: "best project with the most intuitive, user-friendly, and interface design!"
-          },
-          {
-            title: "Best Technical",
-            description: "best project for the most advanced, challenging, and difficulty in implementation!"
-          }
-        ].map((pillar, index) => (
-          <div key={index} className={`${styles.pillarsBox} w-full h-[300px] flex flex-col`}>
-            <h2 className="text-3xl font-extrabold mb-10 text-center" style={{ color: '#46494C' }}>
-              {pillar.title}
-            </h2>
-            <p className="text-1xl font-bold text-center text-white flex-grow flex items-center justify-center px-4">
-              {pillar.description}
-            </p>
-          </div>
-        ))}
-
-      </div>
-
-    </div>
-    </> 
+    </section>
   );
 };

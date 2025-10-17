@@ -1,35 +1,27 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./src/views/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        hue1: "#EEFDFF",
-        hue2: "#DAF6FF",
-        hue3: "#C5EFFF",
-        hue4: "#9BE0FF",
-        hue5: "#71D1FF",
-        hue6: "#5CCAFF",
-        hue7: "#47C2FF"
+        waveTop: "#FCE4D8",
+        waveBottom: "#DFF9FF",
+        brandPink: "#FBACCC",
       },
-      fontDarkBlue : '#47C2FF',
-      
-      fontFamily: {
-        nunito: ['Nunito', 'sans-serif'],
+      keyframes: {
+        floatY: {
+          "0%,100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-12px)" },
+        },
       },
-      screens: {
-        sm: "640px",
-        md: "768px",
-        lg: "1024px",
-        xl: "1280px",
-        "2xl": "1536px",
+      animation: {
+        float: "floatY 5.5s ease-in-out infinite",
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [],
 };
