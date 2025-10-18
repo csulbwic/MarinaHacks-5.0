@@ -15,8 +15,11 @@ export const NavBar = () => {
   const menuRef = useRef<HTMLDivElement>(null);
 
   const navButtons = [
+    { label: "Home", href:"/#home"},
     { label: "About", href: "/#about" },
     { label: "Teams", href: "/#teams" },
+    { label: "Pillars", href: "/#pillars" },
+    { label: "Prizes", href: "/#prizes" },
     { label: "FAQ", href: "/#faq" },
     { label: "Contacts", href: "/#contacts" },
   ];

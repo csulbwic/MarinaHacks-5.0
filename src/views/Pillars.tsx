@@ -7,12 +7,12 @@ const DATA: Pillar[] = [
   {
     title: "Best Social Goods",
     description:
-      "To the project that focuses the best on addressing social issues such as climate change, renewable energy, waste reduction, and sustainable practices!",
+      "Focuses the best on addressing social issues such as climate change, renewable energy, waste reduction, and sustainable practices!",
   },
   {
     title: "Best Entertainment",
     description:
-      "To the project that has the best entertainment product (music, gaming, art, food, culture, outdoor activities, physical activities, fashion, and beauty)!",
+      "Best entertainment product (music, gaming, art, food, culture, outdoor activities, physical activities, fashion, and beauty)!",
   },
  
   {
@@ -33,7 +33,7 @@ export const Pillars = () => {
     >
       {/* Section title */}
       <div className="mx-auto max-w-5xl px-6">
-        <h2 className="text-center text-5xl md:text-6xl font-extrabold text-[#46494C] mb-12">
+        <h2 className="text-6xl text-center font-extrabold text-[#FBACCC] mb-12 mt-20 font-nunito [text-shadow:2px_4px_0_rgba(0,0,0,0.25)]">
           Pillars
         </h2>
 

@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa"
 
 export const Contact = () => {
   return (
-    <div id="contact" className={`flex flex-col justify-center items-center ${style.contactContainer}`}>
+    <div id="contacts" className={`flex flex-col justify-center items-center ${style.contactContainer}`}>
       <h1 className="text-6xl text-center font-bold text-[#F26EAC] mb-6">
         Women in Computing at CSULB
       </h1>
