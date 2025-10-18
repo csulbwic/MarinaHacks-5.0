@@ -6,10 +6,8 @@ import {
   Contact,
   Faq,
   Info,
-  Application,
   Prizes,
   Pillars,
-  Sponsors,
   Team,
   Teaser,
 } from "@/views";
