@@ -38,7 +38,7 @@ export const Faq = () => {
                 className="flex items-center w-full justify-between "
                 onClick={() => toggleActive(index)}
               >
-                <span className="text-xl font-extrabold text-[#FCE4D8] text-left pl-10 font-nunito pt-4">
+                <span className="text-2xl font-extrabold text-[#FCE4D8] text-left pl-10 font-nunito pt-4">
                   {item.question}
                 </span>
                 <img src="/images/faqStar.png" alt="Faq star"
@@ -52,7 +52,7 @@ export const Faq = () => {
                   activeIndex === index ? "max-h-96" : "max-h-0"
                 }`}
               >
-                <p className="px-12 pt-6 text-xl font-bold text-[#FCE4D8] font-nunito">{item.answer}</p>
+                <p className="px-12 pt-6 text-2xl font-bold text-[#FCE4D8] font-nunito">{item.answer}</p>
               </div>
             </div>
           ))}

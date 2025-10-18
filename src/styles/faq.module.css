@@ -29,7 +29,7 @@
 
 
 .questionBox{
-    background: #FBACCC;
+    background: #ec94b8;
     /* color: #5A4157; */
     border-radius: 20px;
     margin-top: 0.3rem;
@@ -41,7 +41,7 @@
 }
 
 .questionBoxActive{
-    background: linear-gradient(to top, #EFC0D1 5%, #FBACCC 50% 70%); /* bottom → top */
+    background: linear-gradient(to top, #EFC0D1 5%, #ec94b8 50% 70%); /* bottom → top */
     /* box-shadow: 0 6px 0 0 #F5B0C3; */
 }
 

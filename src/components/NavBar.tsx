@@ -61,7 +61,7 @@ export const NavBar = () => {
         />
 
         {/* adjust height of navbar on this parent div. you can change it to see how it affects the size of the buttons, etc. to fine tune it if you want */}
-        <div className="flex-1 px-5 h-[50px]">
+        <div className="flex-1 px-5 h-[55px]">
           <nav className="font-bold shadow-md bg-gradient-to-r from-navtransition1 via-navtransition2 to-navtransition3 rounded-full p-2 justify-center items-center flex h-full">
             <ul className="flex items-center justify-between gap-6 w-full h-full">
               {navButtons.map((button, index) => (
