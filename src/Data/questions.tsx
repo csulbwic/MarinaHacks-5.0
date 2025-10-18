@@ -18,6 +18,6 @@ export const questions = [
   {
     question: "What are the benefits in competing?",
     answer:
-      "Competing in MarinaHacks offers hands-on experience, networking with peers and industry professionals, skill development, and the chance to sshowcase your talents!",
+      "Competing in MarinaHacks offers hands-on experience, networking with peers and industry professionals, skill development, and the chance to showcase your talents!",
   },
 ];

@@ -1,40 +1,87 @@
 import style from '../styles/contact.module.css';
+import landing from '../styles/landing.module.css';
+
 import Image from 'next/image';
-import { FaFacebook, FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import Link from 'next/link';
+import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export const Contact = () => {
   return (
-    <div id="contact" className={`flex flex-col justify-center items-center ${style.contactContainer}`}>
-      <h1 className="text-6xl text-center font-bold text-[#F26EAC] mb-6">
-        Women in Computing at CSULB
+    <div id="contacts" className={`flex flex-col justify-center items-center ${style.contactContainer}`}>
+      <h1 className="text-6xl text-center font-extrabold text-[#FBACCC] mb-5 mt-1 font-nunito [text-shadow:0px_4px_3px_rgba(0,0,0,0.25)]">
+        CONTACT US
       </h1>
-      <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-        <div className={`m-6 rounded-2xl bg-gradient-to-r from-mhpurple-200 to-mhpurple-400 ${style.sharkAnimation}`}>
+      <p className="text-1xl text-[#625F5F] font-semibold font-nunito">CSULB Women in Computing</p>
+
+      <div className={style.stage}>
+        {<div className={`m-1 rounded-2xl bg-gradient-to-r from-mhpurple-200 to-mhpurple-400 ${style.sharkAnimation} ${style.centerGraphic}`}>
           <Image
-            src={"/images/logos_4.0/MarinaHacks_4.0_Logo.png"}
-            alt="wiclogo"
+            src={"/images/logos_4.0/main_logo.svg"}
+            alt="MarinaHacks_5.0_logo"
             layout="responsive"
-            width={400}
-            height={100}
+            width={0}
+            height={0}
             className="max-w-full h-auto" // Ensures the image scales down on smaller screens
           />
-        </div>
-        <div className="flex flex-col justify-center items-center text-center">
-          <h2 className="text-2xl font-bold leading-[50px] text-[#45494C] mb-6">Contact Information</h2>
+        </div>}
+        
+      {/* Instagram */}
+      <Link
+        href="https://www.instagram.com/csulbwic/?hl=en"
+        target="_blank"
+        aria-label="Open Instagram in a new tab"
+        className={`${style.bubble} ${style.instagram}`}
+        style={{'--size': '150px'} as React.CSSProperties}
+      >
+        <Image
+          src={"images/Instagram_white.svg"}
+          alt="Instagram"
+          layout="responsive"
+          width={0}
+          height={0}
+          className={style.icon}
+          style={{ transform: 'scale(0.5)' }}
+          />
+      </Link>
 
-          <div className="flex flex-row gap-4 justify-center flex-wrap">
-            <a href="https://www.instagram.com/csulbwic/?hl=en" target="_blank">
-              <FaInstagram className="h-10 w-10 md:h-[60px] md:w-[80px] text-[#FDBBD9] hover:text-[#F26EAC]" />
-            </a>
-            <a href="mailto:csulbwic@gmail.com" target="_blank">
-              <FaEnvelope className="h-10 w-10 md:h-[60px] md:w-[80px] text-[#FDBBD9] hover:text-[#F26EAC]" />
-            </a>
-            <a href="https://www.linkedin.com/company/csulbwic/" target="_blank">
-              <FaLinkedin className="h-10 w-10 md:h-[60px] md:w-[80px] text-[#FDBBD9] hover:text-[#F26EAC]" />
-            </a>
-          </div>
-        </div>
+      {/* LinkedIn */}
+      <Link
+        href="https://www.linkedin.com/company/csulbwic/"
+        target="_blank"
+        aria-label="Open LinkedIn in a new tab"
+        className={`${style.bubble} ${style.linkedin}`}
+        style={{'--size': '110px'} as React.CSSProperties}
+      >
+        <Image
+          src={"images/LinkedIN_white.svg"}
+          alt="Instagram"
+          layout="responsive"
+          width={0}
+          height={0}
+          className={style.icon}
+          style={{ transform: 'scale(0.5)' }}
+          />
+      </Link>
+
+      {/* Email */}
+      <Link
+        href="mailto:csulbwic@gmail.com"
+        target="_blank"
+        aria-label="Send us an email"
+        className={`${style.bubble} ${style.mail}`}
+        style={{'--size': '100px'} as React.CSSProperties}
+      >
+        <Image
+          src={"images/Mail_ru_white.svg"}
+          alt="Instagram"
+          layout="responsive"
+          width={0}
+          height={0}
+          className={style.icon}
+          style={{ transform: 'scale(0.5)' }}
+          />
+      </Link>
       </div>
-    </div>
+    </div>  
   );
 };

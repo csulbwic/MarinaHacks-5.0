@@ -1,5 +1,4 @@
 import styles from '../styles/team.module.css';
-
 type ProfileProps = {
   name: string
   role: string

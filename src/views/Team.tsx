@@ -4,7 +4,7 @@ import styles from "@/styles/team.module.css";
 
 export const Team = () => {
     return (
-      <div id ="team" className={styles.teamContainer}>
+      <div id ="teams" className={styles.teamContainer}>
 
          <h1 className={`${styles.teamHeading} text-5xl mb-20`}>MarinaHacks Team</h1>
          <div>

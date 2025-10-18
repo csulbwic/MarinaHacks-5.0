@@ -4,19 +4,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 10px 20px;
-    gap: 10px;
+
+    justify-content: flex-start;
+    margin: 8px 12px;
+    gap: 12px;
+    isolation: isolate;     
+    z-index: 0;
+    /*justify-content: center;
+     margin: 10px 20px;
+    gap: 10px; */
 }
 
 .dropBubble{
-    width: 350px;
-    height: 350px;
+    width: 240px;
+    height: 240px;
+    /* width: 350px;
+    height: 350px; */
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+      /* If need subtle blue tint remove this */
+  background:
+  radial-gradient(60% 60% at 50% 35%, rgba(255,255,255,0.75) 0%, rgba(210,232,255,0.55) 100%),
+  linear-gradient(180deg, rgba(173,216,255,0.15) 0%, rgba(15,81,111,0.08) 100%);
+
     box-shadow: inset 20px 20px 20px rgba(0,0,0,0.05),
                 25px 35px 20px rgba(0,0,0,0.05),
                 25px 20px 20px rgba(0,0,0,0.05),
@@ -61,7 +74,7 @@
 } */
 
 .pDescription{
-    background-color: #FFD2E6 ;
+    background-color: #ffffffc8 ;
     padding: 30px;
     border-radius: 4rem;
     color: black;
