@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>MarinaHacks 5.0</title>
         <link type="text/css" rel="stylesheet"/>
-        <link rel="icon" href="/images/logos_4.0/MarinaHacks_Logo_4.0_Pallete.png" />
+        <link rel="icon" href="/images/logos_5.0/main_logo.svg" />
       </Head>
 
       <main>

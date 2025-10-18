@@ -73,7 +73,7 @@ export default function Landing() {
       <div className="z-[2] text-center grid place-items-center gap-0">
         <div className="relative w-[520px] h-[520px] drop-shadow-[0_10px_16px_rgba(251,172,204,0.25)] max-lg:w-[420px] max-lg:h-[420px] max-sm:w-[300px] max-sm:h-[300px]">
           <Image
-            src="/images/logos_4.0/main_logo.svg"
+            src="/images/logos_5.0/main_logo.svg"
             alt="MarinaHacks 5.0 logo"
             fill
             sizes="(max-width: 640px) 300px, (max-width: 1024px) 420px, 520px"

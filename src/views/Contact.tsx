@@ -16,7 +16,7 @@ export const Contact = () => {
       <div className={style.stage}>
         {<div className={`m-1 rounded-2xl bg-gradient-to-r from-mhpurple-200 to-mhpurple-400 ${style.sharkAnimation} ${style.centerGraphic}`}>
           <Image
-            src={"/images/logos_4.0/main_logo.svg"}
+            src={"/images/logos_5.0/main_logo.svg"}
             alt="MarinaHacks_5.0_logo"
             layout="responsive"
             width={0}
