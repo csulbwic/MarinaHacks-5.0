@@ -147,6 +147,9 @@ a {
   scroll-margin-top: 0px; 
 }
 
+#prizes {
+  scroll-margin-top: 40px;
+}
 #faq {
   scroll-margin-top: 0px; 
 }

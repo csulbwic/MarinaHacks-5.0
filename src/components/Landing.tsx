@@ -90,3 +90,5 @@ export default function Landing() {
     </section>
   );
 }
+
+// targetDate="2025-10-25T10:00:00"

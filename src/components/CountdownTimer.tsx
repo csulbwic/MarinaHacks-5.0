@@ -48,9 +48,52 @@ export const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
     return () => clearInterval(timer);
   }, [targetDate]);
 
+  const isCountdownOver =
+    timeLeft.days === 0 &&
+    timeLeft.hours === 0 &&
+    timeLeft.minutes === 0 &&
+    timeLeft.seconds === 0;
+
+  if (isCountdownOver) {
+    return (
+      <div className="justify-center mt-10 mb-10">
+        <div className="flex items-center justify-center px-10 md:px-16 py-6 md:h-[140px] bg-white/80 backdrop-blur-m rounded-full shadow-[0_0_25px_rgba(180, 220, 235, 0.6)]">
+            <p className="text-4xl md:text-5xl font-extrabold text-[#FBACCC] font-nunito text-center whitespace-nowrap">
+            MarinaHacks Happens Now!
+            </p>
+        </div>
+
+        <a
+          href="https://devpost.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-10 flex items-center justify-center px-6 py-3 md:px-10 py-3 md:py-4 bg-white/80 backdrop-blur-m rounded-full shadow-[0_0_25px_rgba(180, 220, 235, 0.35)] hover:shadow-[0_0_35px_rgba(251,172,204,0.5)] hover:scale-105 transition-all duration-300 ease-in-out"
+        >
+          <p className="text-lg md:text-2xl font-extrabold text-[#FBACCC] font-nunito text-center whitespace-nowrap">
+            DevPost
+          </p>
+        </a>
+
+        <a
+          href="https://docs.google.com/document/d/1kP8YUct2d7iaGLmMwALtOXxFjrcB5Hv_jwIteBdNCIY/edit?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-3 flex items-center justify-center px-6 py-3 md:px-10 py-3 md:py-4 bg-white/80 backdrop-blur-m rounded-full shadow-[0_0_25px_rgba(180, 220, 235, 0.35)] hover:shadow-[0_0_35px_rgba(251,172,204,0.5)] hover:scale-105 transition-all duration-300 ease-in-out"
+        >
+          <p className="text-lg md:text-2xl font-extrabold text-[#FBACCC] font-nunito text-center whitespace-nowrap">
+            Project Submission Requirements
+          </p>
+        </a>
+      
+      </div>
+      
+    );
+  }
+  
   return (
     // Each time unit in its own box with pink border and white background
     // Styling repeats between boxes, thus using flexbox and grid for layout
+    
     <div className="grid grid-cols-2 sm:grid-cols-4 place-items-center gap-20 md:gap-24 lg:gap-28">
 
       {/* Days */}
@@ -84,6 +127,6 @@ export const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
           <p className="text-[0.75rem] md:text-[1rem] self-center">Seconds</p>
         </div>
       </div>
-    </div>
+    </div>   
   );
 };
