@@ -1,6 +1,7 @@
 import Landing from "@/components/Landing";
 import { NavBar } from "@/components/NavBar";         
 import { Footer } from "@/components/Footer";         
+import Bubbles from "@/components/Bubbles/Bubbles";
 
 import {
   Contact,
@@ -14,8 +15,15 @@ import {
 
 export default function Home() {
   return (
-    <div className="bg-[#DFF9FF]">
-      {/* keep navbar on top without changing NavBar.tsx */}
+    <div>
+      <Bubbles />
+      <Teaser />
+    </div>
+  );
+}
+
+{/*<div className="bg-[#DFF9FF]">
+      {/* keep navbar on top without changing NavBar.tsx *}
       <div className="sticky top-0 z-[70]">
         <NavBar />
       </div>
@@ -27,17 +35,4 @@ export default function Home() {
       <Faq/>
       <Contact/>
       <Footer/>
-    </div>
-  );
-}
-
-/*
-<Bubbles />
-<Landing />
-<Info />
-<Team />
-<Pillars />
-<Prizes/>
-<Faq />
-<Contact />
-*/
+    </div>*/}
