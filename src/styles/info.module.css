@@ -13,8 +13,8 @@
 .infoBox {
     background: linear-gradient(180deg, #FCE4D8 0%, #DAD9F6 100%);
     border-radius: 24px;
-    padding: 3rem 2rem;
-    max-width: 1050px;
+    padding: 0rem 2rem;
+    max-width: 900px;
     font-size: 1.3rem;
     font-weight: 600;
     line-height: 2;
@@ -36,13 +36,13 @@
 }
 
 .leftStar {
-    left: 10%;
+    left: 2%;
     top: 20%;
     transform: rotate(-20deg);
 }
 
 .rightStar {
-  right: 10%;
+  right: 8%;
   top: 60%;
   transform: rotate(15deg);
 }

@@ -29,19 +29,25 @@
 
 
 .questionBox{
-    background: #ec94b8;
+    background: linear-gradient(to top, #DAD9F6 2%, #FBACCC 20% 70%);
     /* color: #5A4157; */
     border-radius: 20px;
     margin-top: 0.3rem;
     margin-bottom: 0.75rem;
     padding-right: 7px;
-    box-shadow: 0 15px 0 0 #EFC0D1; 
+    box-shadow: 0 4px 5px rgba(0,0,0,0.25); 
     padding-bottom: 0%;
+    transition: all 0.2s ease-in-out;
 
 }
 
+.questionBox:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
+}
+
 .questionBoxActive{
-    background: linear-gradient(to top, #EFC0D1 5%, #ec94b8 50% 70%); /* bottom → top */
+    background: linear-gradient(to top, #DAD9F6 0%, #FBACCC 20% 100%); /* bottom → top */
     /* box-shadow: 0 6px 0 0 #F5B0C3; */
 }
 

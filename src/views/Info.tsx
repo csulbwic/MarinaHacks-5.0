@@ -9,15 +9,15 @@ export const Info = () => {
       <Image
         src="/images/star_fish_1.svg"
         alt="Starfish"
-        width={180}
-        height={180}
+        width={150}
+        height={150}
         className={`${styles.starfish} ${styles.leftStar} sway-more-rev sway-origin-bottom [animation-delay:600ms]`}
       />
       <Image
         src="/images/star_fish_2.svg"
         alt="Starfish"
-        width={100}
-        height={100}
+        width={90}
+        height={90}
         className={`${styles.starfish} ${styles.rightStar} sway-more-rev sway-origin-bottom [animation-delay:500ms]`}
       />
 
@@ -27,12 +27,12 @@ export const Info = () => {
         About MarinaHacks
       </h1>
 
-      <p className="text-2xl mt-10 font-nunito">
+      <p className="text-lg mt-10 font-nunito">
         {"Women in Computing is hosting MarinaHacks: California State University Long Beach's annual women-centric hackathon! This free event is dedicated to bringing together women to hone their skills, develop confidence and fill the gender gap within the competitive tech industry."}
       </p>
       <br />
       <br />
-      <p className="text-2xl font-nunito">
+      <p className="text-lg font-nunito">
         {"\nThis semester's MarinaHacks 5.0 will take place on October 25th–26th. You will be able to win prizes, network with other students, attend workshops in order to build your resume, and most importantly — have fun!"}
       </p>
 

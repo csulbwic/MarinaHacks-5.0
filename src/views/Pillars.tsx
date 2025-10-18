@@ -1,24 +1,24 @@
 import React from "react";
 
-type Pillar = { title: string; description: string };
+type Pillar = { title: string; description: string; color: string};
 
 const DATA: Pillar[] = [
-  { title: "Hacker's Favorite", description: "Most memorable and favorite project!" },
+  { title: "Hacker's Favorite", description: "Most memorable and favorite project!", color: "#e480d3ff"},
   {
     title: "Best Social Goods",
     description:
-      "Focuses the best on addressing social issues such as climate change, renewable energy, waste reduction, and sustainable practices!",
+      "Focuses the best on addressing social issues such as climate change, renewable energy, waste reduction, and sustainable practices!", color: "#a6a4e2ff"
   },
   {
     title: "Best Entertainment",
     description:
-      "Best entertainment product (music, gaming, art, food, culture, outdoor activities, physical activities, fashion, and beauty)!",
+      "Best entertainment product (music, gaming, art, food, culture, outdoor activities, physical activities, fashion, and beauty)!", color: "#eb89adff"
   },
  
   {
     title: "Best Technical",
     description:
-      "Best project for the most advanced, challenging, and difficulty in implementation!",
+      "Best project for the most advanced, challenging, and difficulty in implementation!", color: "#fd85b5ff "
   },
 ];
 
@@ -33,7 +33,7 @@ export const Pillars = () => {
     >
       {/* Section title */}
       <div className="mx-auto max-w-5xl px-6">
-        <h2 className="text-6xl text-center font-extrabold text-[#FBACCC] mb-12 mt-20 font-nunito [text-shadow:2px_4px_0_rgba(0,0,0,0.25)]">
+        <h2 className="text-6xl text-center font-extrabold text-[#FBACCC] mb-12 mt-2 font-nunito [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]">
           Pillars
         </h2>
 
@@ -47,7 +47,7 @@ export const Pillars = () => {
                   relative z-10
                   w-[92%] md:w-[88%] lg:w-[84%]
                   rounded-2xl
-                  shadow-[0_6px_0_rgba(0,0,0,0.08)]
+                  shadow-[0_4px_4px_rgba(0,0,0,0.25)]
                   ring-1 ring-black/5
                   text-center
                 "
@@ -72,7 +72,7 @@ export const Pillars = () => {
                   px-8 py-8
                 "
               >
-                <p className="text-center font-bold text-[17px] leading-7 text-[#B3B3B3]">
+                <p className="text-center font-bold text-[17px] leading-7" style={{color:p.color}}>
                   {p.description}
                 </p>
               </div>

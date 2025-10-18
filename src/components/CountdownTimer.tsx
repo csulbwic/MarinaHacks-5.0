@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import style from '../styles/contact.module.css';
 
 interface CountdownTimerProps {
   targetDate: string;
@@ -50,27 +51,35 @@ export const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
   return (
     // Each time unit in its own box with pink border and white background
     // Styling repeats between boxes, thus using flexbox and grid for layout
-    <div className="grid grid-cols-4 gap-[2vw] md:gap-[15px] lg:gap-[20px] justify-center align-middle">
-      <div className="flex justify-center align-middle bg-brandPink p-[6px] rounded-[15px] box-border">
-        <div className="flex flex-col w-full h-full justify-center align-middle p-[20px] bg-white text-foreground rounded-[15px] box-border">
+    <div className="grid grid-cols-2 sm:grid-cols-4 place-items-center gap-20 md:gap-24 lg:gap-28">
+
+      {/* Days */}
+      <div className="flex justify-center p-1">
+        <div className={`${style.bubble} flex flex-col justify-center w-[110px] h-[110px] md:w-[130px] md:h-[130px] p-[10px] bg-white text-foreground`}>
           <p className="font-bold text-[1.5rem]">{timeLeft.days}</p>
           <p className="text-[0.75rem] md:text-[1rem] self-center">Days</p>
         </div>
       </div>
-      <div className="flex justify-center align-middle bg-brandPink p-[6px] rounded-[15px] box-border">
-        <div className="flex flex-col w-full h-full justify-center align-middle p-[20px] bg-white text-foreground rounded-[15px] box-border">
+
+      {/* Hours */}
+      <div className="flex justify-center p-2">
+        <div className={`${style.bubble} flex flex-col justify-center w-[110px] h-[110px] md:w-[130px] md:h-[130px] p-[10px] bg-white text-foreground`}>
           <p className="font-bold text-[1.5rem]">{timeLeft.hours}</p>
           <p className="text-[0.75rem] md:text-[1rem] self-center">Hours</p>
         </div>
       </div>
-      <div className="flex justify-center align-middle bg-brandPink p-[6px] rounded-[15px] box-border">
-        <div className="flex flex-col w-full h-full justify-center align-middle p-[20px] bg-white text-foreground rounded-[15px] box-border">
+
+      {/* Minutes */}
+      <div className="flex justify-center p-1">
+        <div className={`${style.bubble} flex flex-col justify-center w-[110px] h-[110px] md:w-[130px] md:h-[130px] p-[10px] bg-white text-foreground`}>
           <p className="font-bold text-[1.5rem]">{timeLeft.minutes}</p>
           <p className="text-[0.75rem] md:text-[1rem] self-center">Minutes</p>
         </div>
       </div>
-      <div className="flex justify-center align-middle bg-brandPink p-[6px] rounded-[15px] box-border">
-        <div className="flex flex-col w-full justify-center align-middle p-[20px] bg-white text-foreground rounded-[15px] box-border">
+
+      {/* Seconds */}
+      <div className="flex justify-center p-1">
+        <div className={`${style.bubble} flex flex-col justify-center w-[110px] h-[110px] md:w-[130px] md:h-[130px] p-[10px] bg-white text-foreground`}>
           <p className="font-bold text-[1.5rem]">{timeLeft.seconds}</p>
           <p className="text-[0.75rem] md:text-[1rem] self-center">Seconds</p>
         </div>

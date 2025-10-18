@@ -21,7 +21,7 @@ export const NavBar = () => {
     { label: "Pillars", href: "/#pillars" },
     { label: "Prizes", href: "/#prizes" },
     { label: "FAQ", href: "/#faq" },
-    { label: "Contacts", href: "/#contacts" },
+    { label: "Contact Us", href: "/#contacts" },
   ];
 
   const openHamburger = () => {
@@ -61,7 +61,7 @@ export const NavBar = () => {
         />
 
         {/* adjust height of navbar on this parent div. you can change it to see how it affects the size of the buttons, etc. to fine tune it if you want */}
-        <div className="flex-1 px-5 h-[55px]">
+        <div className="flex-1 px-5 h-[60px]">
           <nav className="font-bold shadow-md bg-gradient-to-r from-navtransition1 via-navtransition2 to-navtransition3 rounded-full p-2 justify-center items-center flex h-full">
             <ul className="flex items-center justify-between gap-6 w-full h-full">
               {navButtons.map((button, index) => (
@@ -70,7 +70,7 @@ export const NavBar = () => {
                   className="rounded-full flex-1 text-navtext h-full select-none shadow-md"
                 >
                   <Link
-                    className="bg-navbtn w-full rounded-full h-full flex justify-center items-center"
+                    className="text-xl bg-navbtn w-full rounded-full h-full flex justify-center items-center font-nunito [text-shadow:0px_3px_4px_rgba(0,0,0,0.25)] transition-all duration-200 ease-in-out hover:scale-105 hover:bg-pink-400 hover:shadow-lg hover:text-white"
                     href={button.href}
                   >
                     {button.label}

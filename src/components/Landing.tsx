@@ -6,7 +6,7 @@ export default function Landing() {
     <section
       className="
       relative grid place-items-center min-h-[80vh]
-      pt-[14vw] md:pt-[10vw] lg:pt-[8vw]   /* leave space for the Navbar */
+      pt-[14vw] md:pt-[10vw] lg:pt-[3vw]   /* leave space for the Navbar */
       overflow-hidden                      /* clip anything past the bottom */
       pb-[14vw] md:pb-[10vw] lg:pb-[8vw]   /* leave space for the wave depth */
       bg-gradient-to-b from-[#FCE4D8] to-[#DFF9FF]
@@ -70,7 +70,7 @@ export default function Landing() {
       />
 
       {/* Logo + countdown (still above waves/decors, but below any navbar wrapper) */}
-      <div className="z-[2] text-center grid place-items-center gap-2">
+      <div className="z-[2] text-center grid place-items-center gap-0">
         <div className="relative w-[520px] h-[520px] drop-shadow-[0_10px_16px_rgba(251,172,204,0.25)] max-lg:w-[420px] max-lg:h-[420px] max-sm:w-[300px] max-sm:h-[300px]">
           <Image
             src="/images/logos_4.0/main_logo.svg"
@@ -83,7 +83,7 @@ export default function Landing() {
         </div>
 
         {/* Timer slightly above logo for overlap, but still low overall */}
-        <div className="z-[3] md:-mt-3">
+        <div className="z-[3] md:-mt-16">
           <CountdownTimer targetDate="2025-10-25T10:00:00" />
         </div>
       </div>
