@@ -53,12 +53,15 @@ export const NavBar = () => {
     <div className="w-full h-auto fixed top-0 z-10">
       {/* full size navbar */}
       <div className="hidden md:flex w-full h-full justify-between items-center">
-        <Image
+        <Link href="/#home">
+          <Image
           src="/images/navlogo.png"
-          alt="MarinaHacks 4.0 Logo"
+          alt="MarinaHacks 5.0 Logo"
           width={navLogoSize}
           height={navLogoSize}
-        />
+          className="cursor-pointer"
+          />
+        </Link>
 
         {/* adjust height of navbar on this parent div. you can change it to see how it affects the size of the buttons, etc. to fine tune it if you want */}
         <div className="flex-1 px-5 h-[60px]">
@@ -113,7 +116,7 @@ export const NavBar = () => {
               >
                 <Link
                   onClick={resetHamburger}
-                  className="rounded-full bg-navbtn w-full flex justify-center items-center"
+                  className="rounded-full bg-navbtn w-full flex justify-center items-center text-lg font-nunito [text-shadow:0px_3px_4px_rgba(0,0,0,0.25)]"
                   href={button.href}
                 >
                   {button.label}
@@ -124,12 +127,15 @@ export const NavBar = () => {
         </div>
 
         <div className="flex-none">
-          <Image
+          <Link href="/#home">
+            <Image
             src="/images/navlogo.png"
-            alt="MarinaHacks 4.0 Logo"
-            width={navLogoSizeMobile}
-            height={navLogoSizeMobile}
-          />
+            alt="MarinaHacks 5.0 Logo"
+            width={navLogoSize}
+            height={navLogoSize}
+            className="cursor-pointer"
+            />
+          </Link>
         </div>
       </div>
     </div>
