@@ -1,28 +1,33 @@
 import Landing from "@/components/Landing";
-import { NavBar } from "@/components/NavBar";         
-import { Footer } from "@/components/Footer";         
+import { NavBar } from "@/components/NavBar";
+import { Footer } from "@/components/Footer";
 import Bubbles from "@/components/Bubbles/Bubbles";
 
-import {
-  Contact,
-  Faq,
-  Info,
-  Prizes,
-  Pillars,
-  Team,
-  Teaser,
-} from "@/views";
+import { Contact, Faq, Info, Prizes, Pillars, Team, Teaser } from "@/views";
 
 export default function Home() {
   return (
     <div>
-      <Bubbles />
-      <Teaser />
+      <div className="bg-[#DFF9FF]">
+        {/* keep navbar on top without changing NavBar.tsx */}
+        <div className="sticky top-0 z-[70]">
+          <NavBar />
+        </div>
+        <Landing />
+        <Info />
+        <Team />
+        <Pillars />
+        <Prizes />
+        <Faq />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 }
 
-{/*<div className="bg-[#DFF9FF]">
+{
+  /*<div className="bg-[#DFF9FF]">
       {/* keep navbar on top without changing NavBar.tsx *}
       <div className="sticky top-0 z-[70]">
         <NavBar />
@@ -35,4 +40,5 @@ export default function Home() {
       <Faq/>
       <Contact/>
       <Footer/>
-    </div>*/}
+    </div>*/
+}
