@@ -38,16 +38,39 @@ export const Prizes = () => {
           </p>
         </header>
 
-        {/* Prizes Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
-          {Prize.map((item, index) => (
-            <div key={index} className="transform hover:scale-105 transition-transform duration-300">
-              <PrizeBubbleComponent
-                name={item.name}
-                img={item.PrizeImg} 
-              />
+        {/* Category Prizes Grid */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-center text-gray-800 mb-8">Category Prizes</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
+            {Prize.map((item, index) => (
+              <div key={index} className="transform hover:scale-105 transition-transform duration-300">
+                <PrizeBubbleComponent
+                  name={item.name}
+                  img={item.PrizeImg} 
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Raffle Prizes Section */}
+        <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-lg">
+          <h3 className="text-2xl font-bold text-center text-gray-800 mb-6">🎟️ Raffle Prizes</h3>
+          <p className="text-center text-gray-600 mb-6">
+            Enter our raffle for a chance to win additional prizes! More details coming soon.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-r from-pink-100 to-purple-100 rounded-2xl p-6 text-center">
+              <div className="text-4xl mb-3">🎁</div>
+              <h4 className="font-bold text-lg text-gray-800">Mystery Prize #1</h4>
+              <p className="text-sm text-gray-600">To be announced!</p>
             </div>
-          ))}
+            <div className="bg-gradient-to-r from-blue-100 to-cyan-100 rounded-2xl p-6 text-center">
+              <div className="text-4xl mb-3">🎁</div>
+              <h4 className="font-bold text-lg text-gray-800">Mystery Prize #2</h4>
+              <p className="text-sm text-gray-600">To be announced!</p>
+            </div>
+          </div>
         </div>
 
         {/* Bottom decorative section */}

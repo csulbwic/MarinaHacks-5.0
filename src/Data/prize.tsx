@@ -23,5 +23,9 @@ export const Prize = [
     {
         name : "BEST TECHNICAL | Sceptre E205W 20 Monitor",
         PrizeImg : "/images/prizeImg/SpectreMonitor.png"
+    },
+    {
+        name : "OVERALL HACK | Logitech Keyboard & Mouse Set",
+        PrizeImg : "/images/prizeImg/LogitechMouse.png"
     }
 ]

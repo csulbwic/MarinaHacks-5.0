@@ -40,12 +40,12 @@ function SafeImage({
   const [imgSrc, setImgSrc] = useState(initial);
 
   return (
-    <div className={`relative h-24 w-24 md:h-28 md:w-28 overflow-hidden rounded-full ring-4 ${ringClass} bg-white`}>
+    <div className={`relative h-20 w-20 md:h-24 md:w-24 overflow-hidden rounded-full ${ringClass} bg-white`}>
       <Image
         src={imgSrc}
         alt={alt}
         fill
-        sizes="112px"
+        sizes="96px"
         className="object-cover"
         onError={() => setImgSrc(fallback)}
       />
@@ -62,69 +62,66 @@ export default function TeamsSection() {
   }, {} as any);
 
   return (
-    <section id="teams" className="py-16 bg-sky-50">
-      <div className="mx-auto max-w-7xl px-4">
+    <section id="teams" className="py-16 bg-gradient-to-b from-blue-50 to-pink-50 relative overflow-hidden">
+      {/* Marine Background Decorations - Subtle */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 opacity-10 animate-pulse">
+          <Image src="/images/mermaid.png" alt="mermaid" width={40} height={40} />
+        </div>
+        <div className="absolute top-40 right-20 opacity-8 animate-bounce" style={{animationDuration: '6s'}}>
+          <Image src="/images/shell.png" alt="shell" width={30} height={30} />
+        </div>
+        <div className="absolute bottom-40 left-20 opacity-10 animate-pulse" style={{animationDelay: '3s'}}>
+          <Image src="/images/turtle_with_heart.png" alt="turtle" width={35} height={35} />
+        </div>
+        <div className="absolute bottom-20 right-10 opacity-8 animate-bounce" style={{animationDelay: '2s', animationDuration: '5s'}}>
+          <Image src="/images/flower.png" alt="flower" width={30} height={30} />
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-6xl px-4 relative z-10">
         <header className="mb-12 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-sky-200 text-sky-900 text-sm font-semibold">
-            🌊 Meet the Team
-          </div>
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl text-sky-900">
-            Directors, Officers & Committees
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Meet the Team
           </h2>
-          <div className="mx-auto mt-4 h-1 w-32 rounded-full bg-gradient-to-r from-pink-300 via-sky-300 to-fuchsia-300" />
         </header>
 
-        <div className="space-y-14">
+        <div className="space-y-16">
           {ORDER.map((g) => {
             const list = grouped[g] ?? [];
             if (!list.length) return null;
 
             const meta = GROUP_META[g];
-            const leads = list.filter((m) => /lead/i.test(m.role ?? ""));
-            const rest  = list.filter((m) => !/lead/i.test(m.role ?? ""));
 
             const Card = ({ m }: { m: any }) => {
               const fallback = PLACEHOLDER_BY_TYPE[m.committeeType] || "/images/mermaid.png";
               return (
-                <li className="rounded-2xl bg-white/80 backdrop-blur-sm shadow-sm ring-1 ring-black/5 hover:shadow-md transition">
-                  <div className="flex flex-col items-center p-5">
+                <div className="flex flex-col items-center text-center">
+                  <div className="relative mb-3">
                     <SafeImage
                       src={m.img}
                       alt={m.name}
                       fallback={fallback}
-                      ringClass={meta.ring}
+                      ringClass="ring-2 ring-white shadow-md"
                     />
-                    <h4 className="mt-3 text-base font-semibold text-center text-sky-900">{m.name}</h4>
-                    {g === 2 ? (
-                      <p className="text-sm text-gray-800">{m.role ?? "Officer"}</p>
-                    ) : (
-                      <p className="text-sm text-gray-600">{m.role ?? "Member"}</p>
-                    )}
                   </div>
-                </li>
+                  <h4 className="text-sm font-semibold text-gray-800 mb-1">{m.name}</h4>
+                  <p className="text-xs text-gray-600 leading-tight">{m.role ?? "Member"}</p>
+                </div>
               );
             };
 
             return (
-              <section key={g} id={meta.id}>
-                <h3 className={`inline-flex items-center rounded-full px-4 py-1 text-base md:text-lg font-bold ${meta.badge}`}>
-                  {meta.title}
-                </h3>
+              <section key={g} id={meta.id} className="relative">
+                <div className="text-center mb-8">
+                  <h3 className={`text-2xl md:text-3xl font-bold mb-2 ${g === 1 ? 'text-pink-600' : g === 2 ? 'text-blue-600' : g === 3 ? 'text-purple-600' : g === 4 ? 'text-cyan-600' : 'text-green-600'}`}>
+                    {meta.title.toUpperCase()}
+                  </h3>
+                </div>
 
-                {leads.length > 0 && (
-                  <>
-                    <p className="mt-3 text-sm text-gray-700">
-                      <span className="font-semibold">Lead(s):</span> {leads.map((m) => m.name).join(", ")}
-                    </p>
-                    <ul className="mt-4 grid gap-6 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-                      {leads.map((m) => <Card key={`lead-${m.name}`} m={m} />)}
-                    </ul>
-                  </>
-                )}
-
-                <ul className="mt-6 grid gap-6 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-                  {rest.map((m) => <Card key={m.name} m={m} />)}
-                </ul>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 justify-items-center">
+                  {list.map((m) => <Card key={m.name} m={m} />)}
+                </div>
               </section>
             );
           })}
