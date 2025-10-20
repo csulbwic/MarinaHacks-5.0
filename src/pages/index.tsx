@@ -15,9 +15,19 @@ import {
 
 export default function Home() {
   return (
-    <div>
-      <Bubbles />
-      <Teaser />
+    <div className="bg-[#DFF9FF]">
+      {/* keep navbar on top without changing NavBar.tsx */}
+      <div className="sticky top-0 z-[70]">
+        <NavBar />
+      </div>
+      <Landing />
+      <Info />
+      <Team />
+      <Pillars />
+      <Prizes />
+      <Faq/>
+      <Contact/>
+      <Footer/>
     </div>
   );
 }
