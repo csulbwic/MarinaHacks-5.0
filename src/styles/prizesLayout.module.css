@@ -1,0 +1,186 @@
+.orbitWrap {
+  position: relative;
+  width: min(95vw, 980px);
+  aspect-ratio: 16 / 13;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
+
+
+.q1 {
+  position: absolute;
+  left: 1%;
+  top: 3%;
+}
+
+.q2 {
+  position: absolute;
+  right: 1%;
+  top: 3%;
+}
+
+.q3 {
+  position: absolute;
+  left: 21%;
+  bottom:6%;
+}
+
+.q4 {
+  position: absolute;
+  right: 21%;
+  bottom: 6%;
+}
+
+.slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: clamp(180px, 24vw, 260px);
+}
+
+.circle {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+  /* base roundness */
+  background:
+    radial-gradient(120% 120% at 30% 30%, rgba(255, 255, 255, 0.65) 0%, rgba(233, 248, 255, 0.45) 55%, rgba(216, 238, 248, 0.35) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow:
+    0 18px 50px rgba(14, 55, 91, 0.18),
+    inset 0 18px 28px rgba(255, 255, 255, 0.75),
+    inset 0 -10px 22px rgba(186, 224, 242, 0.55);
+
+  /* subtle top V notch */
+  clip-path: polygon(50% 5%, 60% 6%, 70% 9%, 80% 14%, 88% 20%, 93% 28%, 96% 36%, 98% 46%,
+      98% 54%, 96% 64%, 93% 72%, 88% 80%, 80% 86%, 70% 91%, 60% 94%, 50% 95%,
+      40% 94%, 30% 91%, 20% 86%, 12% 80%, 7% 72%, 4% 64%, 2% 54%,
+      2% 46%, 4% 36%, 7% 28%, 12% 20%, 20% 14%, 30% 9%, 40% 6%);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 120% at 30% 30%,
+      rgba(255, 255, 255, 0.32) 0%,
+      rgba(233, 248, 255, 0.22) 55%,
+      rgba(216, 238, 248, 0.15) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow:
+    0 18px 50px rgba(14, 55, 91, 0.14),
+    inset 0 16px 26px rgba(255, 255, 255, 0.55),
+    inset 0 -10px 20px rgba(186, 224, 242, 0.40);
+}
+
+/* Inside the circle, hold the prize image */
+.imgBox {
+  position: relative;
+  width: 88%;
+  aspect-ratio: 1 / 1;
+  transform: translateY(2%);
+}
+
+.imgFill {
+  position: absolute;
+  inset: 0;
+  object-fit: contain;
+}
+
+.caption {
+  margin-top: 12px;
+  text-align: center;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.10);
+  font-size: clamp(16px, 2.2vw, 20px);
+  color: #f8a9c7;
+  /* Marina pink */
+}
+
+.captionTop {
+  font-weight: 900;
+}
+
+.captionSub {
+  font-weight: 700;
+  opacity: 0.9;
+  font-size: 0.92em;
+}
+
+@keyframes floatY {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(1.4deg);
+  }
+
+  /* more lift + gentle tilt */
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.float {
+  animation: floatY 5.5s ease-in-out infinite;
+}
+
+.d1 {
+  animation-delay: 0s;
+}
+
+.d2 {
+  animation-delay: .5s;
+}
+
+.d3 {
+  animation-delay: 1.0s;
+}
+
+.d4 {
+  animation-delay: 2.0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .float,
+  .d1,
+  .d2,
+  .d3,
+  .d4 {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .orbitWrap {
+    width: min(96vw, 560px);
+  }
+
+  .q1,
+  .q2 {
+    top: 6%;
+  }
+
+  .q3,
+  .q4 {
+    bottom: 5%;
+  }
+}
+/* make each bubble stack above decor */
+.slot {
+  position: relative;          
+  z-index: 2;                  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: clamp(160px, 22vw, 220px);
+}
