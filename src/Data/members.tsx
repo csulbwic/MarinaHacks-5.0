@@ -1,215 +1,63 @@
 /*
+GROUP 1: Directors
 GROUP 2: WiC Officers
 GROUP 3: Website Committee
 GROUP 4: Design Committee
+GROUP 5: Sponsorship Committee
 */
 
 export const members = [
-  {
-    name: 'Jenna Koo',
-    group: 1,
-    role: 'MarinaHacks Director',
-    img: 'images/team_photos/Jenna_K_4.0.JPG',
-    committeeType: "marinaHacksCommittee",
-  },
+  // ===== DIRECTORS (Group 1) =====
+  { name: 'Citlally V.',   group: 1, role: 'MarinaHacks Co-Director', committeeType: 'director',  img: '/Team_Photos/Citlally_V.JPG' },
+  { name: 'Mometa U.',     group: 1, role: 'MarinaHacks Co-Director', committeeType: 'director',  img: '/Team_Photos/Mometa_Uddin.JPG' },
 
-  {
-    name: 'Cristina Le',
-    group: 2,
-    role: 'President',
-    img: 'images/team_photos/Cristina_L.JPG',
-    committeeType: "officer",
-  },
-  {
-    name: 'Citlally Vasquez-Gonzalez',
-    group: 2,
-    role: 'Vice President',
-    img: 'images/team_photos/Citlally_V.JPG',
-    committeeType: 'officer',
-  },
-  {
-    name: 'Jenna Koo',
-    group: 2,
-    role: 'MarinaHacks Director',
-    img: 'images/team_photos/Jenna_K_4.0.JPG',
-    committeeType: "officer",
-  },
-  {
-    name: 'Lizeth Valdovinos',
-    group: 2,
-    role: 'Graphic Designer Lead',
-    img: 'images/team_photos/Lizeth_V_4.0.JPG',
-    committeeType: 'officer',
-  },
-  {
-    name: 'Arwen Thea Saldana',
-    group: 2,
-    role: 'Co-Graphic Designer',
-    img: 'images/team_photos/Arwen_T.jpg',
-    committeeType: "officer",
-  },
-  {
-    name: 'Anita Demirci',
-    group: 2,
-    role: 'Co-Graphic Designer',
-    img: 'images/team_photos/Anita_D.JPG',
-    committeeType: 'officer',
-  },
-  {
-    name: 'Reyna Aguirre-Okamune',
-    group: 2,
-    role: 'Social Media Chair',
-    img: 'images/team_photos/Reyna_Aguirre.JPG',
-    committeeType: 'officer',
-  },
-  {
-    name: 'My Lu',
-    group: 2,
-    role: 'Webmaster',
-    img: 'images/team_photos/My_Lu.JPG',
-    committeeType: 'officer',
-  },
-  {
-    name: 'Daksha Arvind',
-    group: 2,
-    role: 'Event Coordinator',
-    img: 'images/team_photos/Daksha_A.JPG',
-    committeeType: 'officer',
-  },
-  {
-    name: 'Lexi Nguyen',
-    group: 2,
-    role: 'Co-Sisterhood Coordinator',
-    img: 'images/team_photos/Lexi_N_4.0.JPG',
-    committeeType: 'officer',
-  },
-  {
-    name: 'Kelly Pham',
-    group: 2,
-    role: 'Treasurer',
-    img: 'images/team_photos/Kelly_P.JPG',
-    committeeType: 'officer',
-  },
-  {
-    name: 'Julie Truong',
-    group: 2,
-    role: 'Secretary',
-    img: 'images/team_photos/Julie_T.JPG',
-    committeeType: "officer",
-  },
-  {
-    name: 'Gaurav Paryani',
-    group: 2,
-    role: 'School Outreach Co-Lead',
-    img: 'images/team_photos/Gaurav_P.jpg',
-    committeeType: "officer",
-  },
+  // ===== OFFICERS (Group 2) =====
+  { name: 'Daksha A.',     group: 2, role: 'President',        committeeType: 'officer',  img: '/Team_Photos/Daksha_Arvind.JPG' },
+  { name: 'Citlally V.',   group: 2, role: 'Co-Vice President', committeeType: 'officer',  img: '/Team_Photos/Citlally_V.JPG' },
+  { name: 'Mya B.',        group: 2, role: 'Co-Vice President', committeeType: 'officer',  img: '/Team_Photos/Mya_B.JPG' },
+  { name: 'Julie T.',      group: 2, role: 'Co-Secretary',     committeeType: 'officer',  img: '/Team_Photos/Julie_T.JPG' },
+  { name: 'Lilly N.',      group: 2, role: 'Co-Secretary',     committeeType: 'officer',  img: '/Team_Photos/LillyNguyen.JPG' },
+  { name: 'Zarya A.',      group: 2, role: 'Co-Treasurer',     committeeType: 'officer',  img: '/Team_Photos/ZaryaAmin.jpeg' },
+  { name: 'Shishira S.',   group: 2, role: 'Industry Chair',  committeeType: 'officer',  img: '/Team_Photos/ShishiraShashidhar.png' },
+  { name: 'Stacy M.',      group: 2, role: 'Event Coordinator', committeeType: 'officer',  img: '/Team_Photos/StacyMazariego.jpeg' },
+  { name: 'Christina P.',  group: 2, role: 'AESB Representative', committeeType: 'officer',  img: '/Team_Photos/Christina_Peralta.JPG' },
+  { name: 'Anna G.',       group: 2, role: 'Webmaster',       committeeType: 'officer',  img: '/Team_Photos/Anna_Gelisanga.JPG' },
+  { name: 'Tessa H.',      group: 2, role: 'Co-Social Media Coordinator', committeeType: 'officer',  img: '/Team_Photos/Tessa_Holder.jpg' },
+  { name: 'Thrity G.',     group: 2, role: 'Co-Social Media Coordinator', committeeType: 'officer',  img: '/Team_Photos/Thrity_Golzari.JPG' },
+  { name: 'Anita D.',      group: 2, role: 'Graphic Design Coordinator', committeeType: 'officer',  img: '/Team_Photos/Anita_D.JPG' },
+  { name: 'Warissa H.',    group: 2, role: 'Graphic Design Coordinator', committeeType: 'officer',  img: '/Team_Photos/Warissa_Hossain.JPG' },
+  { name: 'Amanda G.',     group: 2, role: 'School Outreach Coordinator', committeeType: 'officer',  img: '/Team_Photos/Amanda_Gantugs.JPG' },
+  { name: 'Peter T.',      group: 2, role: 'School Outreach Coordinator', committeeType: 'officer',  img: '/Team_Photos/Peter_Tran.png' },
+  { name: 'Mia C.',        group: 2, role: 'Sisterhood Coordinator', committeeType: 'officer',  img: '/Team_Photos/MiaCarter.jpg' },
+  { name: 'Belle L.',      group: 2, role: 'Sisterhood Coordinator', committeeType: 'officer',  img: '/Team_Photos/Belle_Lopez.jpeg' },
+  { name: 'Lexi N.',       group: 2, role: 'Sisterhood Coordinator', committeeType: 'officer',  img: '/Team_Photos/Lexi_N_4.0.JPG' },
 
-  {
-    name: 'Mya Barragan',
-    group: 2,
-    role: 'School Outreach Co-Lead',
-    img: 'images/team_photos/Mya_B.JPG',
-    committeeType: "officer",
-  },
+  // ===== WEBSITE (Group 3) =====
+  { name: 'Anna G.',       group: 3, role: 'Website Co-Lead',  committeeType: 'website',  img: '/Team_Photos/Anna_Gelisanga.JPG' },
+  { name: 'Amanda G.',     group: 3, role: 'Website Co-Lead',  committeeType: 'website',  img: '/Team_Photos/Amanda_Gantugs.JPG' },
 
-  {
-    name: 'Reyna Aguirre-Okamune',
-    group: 3,
-    role: 'Website Lead',
-    img: 'images/team_photos/Reyna_Aguirre.JPG',
-    committeeType: "website",
-  },
-  {
-    name: 'My Lu',
-    group: 3,
-    role: 'Website Developer',
-    img: 'images/team_photos/My_Lu.JPG',
-    committeeType: "website",
-  },
-  {
-    name: 'Joshua-Michael Estebat',
-    group: 3,
-    role: 'Website & Portal Developer',
-    img: 'images/team_photos/Joshua-E.JPG',
-    committeeType: "website",
-  },
-  {
-    name: 'Jesus Donate',
-    group: 3,
-    role: 'Website Developer',
-    img: 'images/team_photos/Jesus_Donate.JPG',
-    committeeType: "website",
-  },
-  {
-    name: 'Mekhi Hart Dela Cruz',
-    group: 3,
-    role: 'MarinaMuse Project Lead',
-    img: 'images/team_photos/Mekhi_H.JPG',
-    committeeType: "website",
-  },
-  {
-    name: 'Justine Cruz',
-    group: 3,
-    role: 'MarinaMuse Developer',
-    img: 'images/team_photos/Justine_C.jpg',
-    committeeType: "website",
-  },
-  {
-    name: 'Krisha Hemani',
-    group: 3,
-    role: 'MarinaMuse Developer',
-    img: 'images/team_photos/Krisha_H.JPG',
-    committeeType: "website",
-  },
-  {
-    name: 'Kelly Pham',
-    group: 3,
-    role: 'Portal Project Lead',
-    img: 'images/team_photos/Kelly_P.JPG',
-    committeeType: "website",
-  },
-  {
-    name: 'Abhinav Bachu',
-    group: 3,
-    role: 'Portal Developer',
-    img: 'images/team_photos/Abhinav_B.JPG',
-    committeeType: "website",
-  },
-  {
-    name: 'Prexa Kamani',
-    group: 3,
-    role: 'Portal Developer',
-    img: 'images/team_photos/Prexa_K.jpg',
-    committeeType: "website",
-  },
-  {
-    name: 'Julie Truong',
-    group: 3,
-    role: 'Mobile App Developer',
-    img: 'images/team_photos/Julie_T.JPG',
-    committeeType: "website",
-  },
+  { name: 'Robee D.',      group: 3, role: 'Member',           committeeType: 'website',  img: '/Team_Photos/Robee_DelosSantos.JPG' },
+  { name: 'Danniella M.',  group: 3, role: 'Member',           committeeType: 'website',  img: '/Team_Photos/Danniella_Martinez.JPG' },
+  { name: 'Deanna S.',     group: 3, role: 'Member',           committeeType: 'website',  img: '/Team_Photos/Deanna_Solis.JPG' },
+  { name: 'Krisha H.',     group: 3, role: 'Member',           committeeType: 'website',  img: '/Team_Photos/Krisha_H.JPG' },
+  { name: 'Shreenithi T.', group: 3, role: 'Member',           committeeType: 'website' },
+  { name: 'Bryan C.',      group: 3, role: 'Member',           committeeType: 'website' },
 
+  // ===== DESIGN (Group 4) =====
+  { name: 'Anita D.',      group: 4, role: 'Design Co-Lead',   committeeType: 'designer', img: '/Team_Photos/Anita_D.JPG' },
+  { name: 'Warissa H.',    group: 4, role: 'Design Co-Lead',   committeeType: 'designer', img: '/Team_Photos/Warissa_Hossain.JPG' },
 
+  { name: 'Hollie T.',     group: 4, role: 'Member',           committeeType: 'designer', img: '/Team_Photos/Hollie_Tran.JPG' },
+  { name: 'Dhara S.',      group: 4, role: 'Member',           committeeType: 'designer', img: '/Team_Photos/Dhara_Shah.JPG' },
+  { name: 'Celina T.',     group: 4, role: 'Member',           committeeType: 'designer', img: '/Team_Photos/Celina_Tong.JPG' },
+  { name: 'Mishka M.',     group: 4, role: 'Member',           committeeType: 'designer',  img: '/Team_Photos/Mishka_Mansukhani.JPG' },
 
-  {
-    name: 'Lizeth Valdovinos',
-    group: 4,
-    role: 'Designer Co-Lead',
-    img: 'images/team_photos/Lizeth_V_4.0.JPG',
-    committeeType: "designer",
-  },
+  // ===== SPONSORSHIP (Group 5) =====
+  { name: 'Christina P.',  group: 5, role: 'Sponsorship Lead', committeeType: 'sponsorship', img: '/Team_Photos/Christina_Peralta.JPG' },
 
-  {
-    name: 'Citlally Vasquez-Gonzalez',
-    group: 4,
-    role: 'Designer Co-Lead',
-    img: 'images/team_photos/Citlally_V.JPG',
-    committeeType: "designer",
-  },
-
-
-]
-
-
+  { name: 'Mindy Y.',      group: 5, role: 'Member',           committeeType: 'sponsorship', img: '/Team_Photos/Mindy_Yun.JPG' },
+  { name: 'Zarya A.',      group: 5, role: 'Member',           committeeType: 'sponsorship', img: '/Team_Photos/ZaryaAmin.jpeg' },
+  { name: 'Antonio L.',    group: 5, role: 'Member',           committeeType: 'sponsorship' },
+  { name: 'Brittanys T.',  group: 5, role: 'Member',           committeeType: 'sponsorship' },
+  { name: 'Sara T.',       group: 5, role: 'Member',           committeeType: 'sponsorship', img: '/Team_Photos/Sara_Tfaili.JPG' },
+];
