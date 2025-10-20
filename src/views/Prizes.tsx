@@ -59,7 +59,7 @@ export const Prizes = () => {
       <div className={`${layout.orbitWrap} -mt-8 sm:-mt-10 lg:-mt-12 mb-0`}>
         <div className={`${layout.center} w-[200px] sm:w-[330px] md:w-[300px] aspect-square`}>
           <Image
-            src="/images/logos_4.0/main_logo.svg"
+            src="/images/logos_5.0/main_logo.svg"
             alt="MarinaHacks 5.0 logo"
             fill
             className="sway-more-slow object-contain"
