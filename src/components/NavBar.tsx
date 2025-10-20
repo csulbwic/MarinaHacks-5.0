@@ -15,13 +15,13 @@ export const NavBar = () => {
   const menuRef = useRef<HTMLDivElement>(null);
 
   const navButtons = [
-    { label: "Home", href:"/#home"},
+    { label: "Home", href: "/#home" },
     { label: "About", href: "/#about" },
     { label: "Teams", href: "/#teams" },
     { label: "Pillars", href: "/#pillars" },
     { label: "Prizes", href: "/#prizes" },
     { label: "FAQ", href: "/#faq" },
-    { label: "Contact Us", href: "/#contacts" },
+    { label: "Contact", href: "/#contacts" },
   ];
 
   const openHamburger = () => {
@@ -55,11 +55,11 @@ export const NavBar = () => {
       <div className="hidden md:flex w-full h-full justify-between items-center">
         <Link href="/#home">
           <Image
-          src="/images/navlogo.png"
-          alt="MarinaHacks 5.0 Logo"
-          width={navLogoSize}
-          height={navLogoSize}
-          className="cursor-pointer"
+            src="/images/navlogo.png"
+            alt="MarinaHacks 5.0 Logo"
+            width={navLogoSize}
+            height={navLogoSize}
+            className="cursor-pointer"
           />
         </Link>
 
@@ -73,7 +73,7 @@ export const NavBar = () => {
                   className="rounded-full flex-1 text-navtext h-full select-none shadow-md"
                 >
                   <Link
-                    className="text-xl bg-navbtn w-full rounded-full h-full flex justify-center items-center font-nunito [text-shadow:0px_3px_4px_rgba(0,0,0,0.25)] transition-all duration-200 ease-in-out hover:scale-105 hover:bg-pink-400 hover:shadow-lg hover:text-white"
+                    className="text-sm md:text-md lg:text-xl bg-navbtn w-full rounded-full h-full flex justify-center items-center font-nunito [text-shadow:0px_3px_4px_rgba(0,0,0,0.25)] transition-all duration-200 ease-in-out hover:scale-105 hover:bg-pink-400 hover:shadow-lg hover:text-white"
                     href={button.href}
                   >
                     {button.label}
@@ -129,11 +129,11 @@ export const NavBar = () => {
         <div className="flex-none">
           <Link href="/#home">
             <Image
-            src="/images/navlogo.png"
-            alt="MarinaHacks 5.0 Logo"
-            width={navLogoSize}
-            height={navLogoSize}
-            className="cursor-pointer"
+              src="/images/navlogo.png"
+              alt="MarinaHacks 5.0 Logo"
+              width={navLogoSize}
+              height={navLogoSize}
+              className="cursor-pointer"
             />
           </Link>
         </div>
