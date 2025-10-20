@@ -8,8 +8,8 @@ GROUP 5: Sponsorship Committee
 
 export const members = [
   // ===== DIRECTORS (Group 1) =====
-  { name: 'Citlally V.',   group: 1, role: 'MarinaHacks Co-Director', committeeType: 'director',  img: '/Team_Photos/Citlally_V.JPG' },
-  { name: 'Mometa U.',     group: 1, role: 'MarinaHacks Co-Director', committeeType: 'director',  img: '/Team_Photos/Mometa_Uddin.JPG' },
+  { name: 'Citlally V.',   group: 1, role: 'MarinaHacks Co-Director', committeeType: 'director',  img: "Team_Photos/Citlally_V.JPG" },
+  { name: 'Mometa U.',     group: 1, role: 'MarinaHacks Co-Director', committeeType: 'director',  img: 'Team_Photos/Mometa_Uddin.JPG' },
 
   // ===== OFFICERS (Group 2) =====
   { name: 'Daksha A.',     group: 2, role: 'President',        committeeType: 'officer',  img: '/Team_Photos/Daksha_Arvind.JPG' },
