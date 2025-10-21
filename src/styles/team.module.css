@@ -1,21 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 
-.marinaHacksCommittee {
-  background-color: rgba(242,110,172,1);
-}
-
-.officersCommittee {
-  background-color: rgba(242,110,172,0.8);
-}
-
-.websiteCommittee {
-  background-color: #e9559a;
-}
-
-.designCommittee {
-  background-color: #d26196;
-}
-
 .teamContainer {
   padding-left: 10%;
   padding-right: 10%;
@@ -25,11 +9,13 @@
 }
 
 .teamHeading {
-  color: #45494C;
-  font-family: 'Poppins', sans-serif;
+  color: #FBACCC;
+  font-family: 'Nunito', sans-serif;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
   text-align: center;
   font-weight: 800;
 }
+
 
 .teamSubHeading {
   color: #FAFEF7;
@@ -53,18 +39,20 @@
 }
 
 .profilePic {
-  width: 20vw;
-  height: 20vw;
+  width: 9.5vw;
+  height: 9.5vw;
   object-fit: cover;
   border-radius: 50%;
+  border: 5px solid #bfe4fb;
   max-width: 200px;
   max-height: 200px;
 }
 
 .profileName {
-  color: #46494C;
+  color: #5889a8;
+  text-shadow: 0px 3px 2px white;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   font-weight: 700;
   padding-top: 15px;
   padding-bottom: 10px;
@@ -75,12 +63,13 @@
 }
 
 .profileRole {
-  color: #FAFEF7;
+  color: #5889a8;
+  text-shadow: 0px 3px 2px white;
   text-align: center;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: 700;
   border-radius: 40px;
-  padding: 5px 20px;
+  padding: 0px 20px;
 }
 
 .memberContainer {
@@ -94,6 +83,42 @@
 
 .committeeHeading {
   padding-top: 60px;
+}
+
+.memberGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 230px));
+  gap: 1rem;
+  place-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 1.5rem auto 0;
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 640px) {
+  .memberGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Large screens (desktop) */
+@media (min-width: 1024px) {
+  .memberGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* Extra-large screens */
+@media (min-width: 1280px) {
+  .memberGrid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2.5rem;
+  }
 }
 
 /* Mobile responsiveness */
@@ -111,18 +136,18 @@
   }
 
   .profilePic {
-    width: 35vw;
-    height: 35vw;
+    width: 20vw;
+    height: 20vw;
     max-width: 150px;
     max-height: 150px;
   }
 
   .profileName {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 
   .profileRole {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     padding: 3px 15px;
   }
 
