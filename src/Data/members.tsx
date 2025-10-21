@@ -8,8 +8,8 @@ GROUP 5: Sponsorship Committee
 
 export const members = [
   // ===== DIRECTORS (Group 1) =====
-  { name: 'Citlally V.',   group: 1, role: 'MarinaHacks Co-Director', committeeType: 'director',  img: '/Team_Photos/Citlally_V.JPG' },
-  { name: 'Mometa U.',     group: 1, role: 'MarinaHacks Co-Director', committeeType: 'director',  img: '/Team_Photos/Mometa_Uddin.JPG' },
+  { name: 'Citlally V.',   group: 1, role: 'MarinaHacks Co-Director', committeeType: 'director',  img: "Team_Photos/Citlally_V.JPG" },
+  { name: 'Mometa U.',     group: 1, role: 'MarinaHacks Co-Director', committeeType: 'director',  img: 'Team_Photos/Mometa_Uddin.JPG' },
 
   // ===== OFFICERS (Group 2) =====
   { name: 'Daksha A.',     group: 2, role: 'President',        committeeType: 'officer',  img: '/Team_Photos/Daksha_Arvind.JPG' },
@@ -40,8 +40,8 @@ export const members = [
   { name: 'Danniella M.',  group: 3, role: 'Member',           committeeType: 'website',  img: '/Team_Photos/Danniella_Martinez.JPG' },
   { name: 'Deanna S.',     group: 3, role: 'Member',           committeeType: 'website',  img: '/Team_Photos/Deanna_Solis.JPG' },
   { name: 'Krisha H.',     group: 3, role: 'Member',           committeeType: 'website',  img: '/Team_Photos/Krisha_H.JPG' },
-  { name: 'Shreenithi T.', group: 3, role: 'Member',           committeeType: 'website' },
-  { name: 'Bryan C.',      group: 3, role: 'Member',           committeeType: 'website' },
+  { name: 'Shreenithi T.', group: 3, role: 'Member',           committeeType: 'website', img:'/images/logos_5.0/main_logo.svg' },
+  { name: 'Bryan C.',      group: 3, role: 'Member',           committeeType: 'website', img:'/images/logos_5.0/main_logo.svg' },
 
   // ===== DESIGN (Group 4) =====
   { name: 'Anita D.',      group: 4, role: 'Design Co-Lead',   committeeType: 'designer', img: '/Team_Photos/Anita_D.JPG' },
@@ -57,7 +57,7 @@ export const members = [
 
   { name: 'Mindy Y.',      group: 5, role: 'Member',           committeeType: 'sponsorship', img: '/Team_Photos/Mindy_Yun.JPG' },
   { name: 'Zarya A.',      group: 5, role: 'Member',           committeeType: 'sponsorship', img: '/Team_Photos/ZaryaAmin.jpeg' },
-  { name: 'Antonio L.',    group: 5, role: 'Member',           committeeType: 'sponsorship' },
-  { name: 'Brittanys T.',  group: 5, role: 'Member',           committeeType: 'sponsorship' },
+  { name: 'Antonio L.',    group: 5, role: 'Member',           committeeType: 'sponsorship', img:'' },
+  { name: 'Brittanys T.',  group: 5, role: 'Member',           committeeType: 'sponsorship', img: ''},
   { name: 'Sara T.',       group: 5, role: 'Member',           committeeType: 'sponsorship', img: '/Team_Photos/Sara_Tfaili.JPG' },
 ];

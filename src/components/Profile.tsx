@@ -1,10 +1,9 @@
 import styles from '../styles/team.module.css';
-
 type ProfileProps = {
-  name: string
-  role: string
-  img: string
-  committeeType: string
+  name?: string;
+  role?: string;
+  img?: string;
+  committeeType: string;
 }
 
 export const Profile = ({ name, role, img, committeeType }: ProfileProps) => {

@@ -1,52 +1,98 @@
-import React from 'react'
-import Image from 'next/image'
-import style from '../styles/landing.module.css'
-import { CountdownTimer } from './CountdownTimer'
+import Image from "next/image";
+import { CountdownTimer } from "@/components/CountdownTimer";
 
-export const Landing = () => {
+export default function Landing() {
   return (
-    <div id="landing" className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden pt-16">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Floating bubbles */}
-        <div className="absolute top-20 left-10 w-8 h-8 bg-pink-200/30 rounded-full animate-bounce" style={{animationDelay: '0s', animationDuration: '3s'}}></div>
-        <div className="absolute top-40 right-20 w-12 h-12 bg-purple-200/30 rounded-full animate-bounce" style={{animationDelay: '1s', animationDuration: '4s'}}></div>
-        <div className="absolute bottom-40 left-20 w-6 h-6 bg-blue-200/30 rounded-full animate-bounce" style={{animationDelay: '2s', animationDuration: '2.5s'}}></div>
-        <div className="absolute bottom-20 right-10 w-10 h-10 bg-pink-300/30 rounded-full animate-bounce" style={{animationDelay: '1.5s', animationDuration: '3.5s'}}></div>
+    <section
+      className="
+      relative grid place-items-center min-h-[80vh]
+      pt-[14vw] md:pt-[10vw] lg:pt-[3vw]   /* leave space for the Navbar */
+      overflow-hidden                      /* clip anything past the bottom */
+      pb-[14vw] md:pb-[10vw] lg:pb-[8vw]   /* leave space for the wave depth */
+      bg-gradient-to-b from-[#FCE4D8] to-[#DFF9FF]
+    "
+    >
+      <div
+        id="home"
+        aria-hidden
+        className="absolute inset-0 z-0 pointer-events-none"
+      >
+        <div
+          className="
+            absolute left-0 right-0
+            top-[36%] bottom-0                /* keep waves inside the section */
+            md:top-[34%]
+            bg-no-repeat bg-cover
+            bg-[url('/images/Both_waves.svg')]
+            bg-[center_44%]
+            waves-sway 
+        "
+        />
       </div>
 
-      {/* Main content */}
-      <div className="flex flex-col items-center space-y-8 z-10">
-        {/* Logo with enhanced animation */}
-        <div className="relative group">
-          <div className={`${style.sharkImage} ${style.sharkAnimation} hover:scale-105 transition-transform duration-300`}>
-            <Image 
-              src="/images/logos_4.0/MarinaHacks_Logo_4.0_Pallete.png"
-              alt='MarinaHacks 5.0 Logo'
-              width={550}
-              height={550}
-              className="drop-shadow-2xl"
-            />
-          </div>
-          {/* Subtle glow effect */}
-          <div className="absolute inset-0 bg-gradient-to-r from-pink-400/20 via-purple-400/20 to-blue-400/20 rounded-full blur-xl scale-110 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      {/* Decorations (under logo/timer) */}
+      <Image
+        src="/images/star_fish_1.svg"
+        alt="Starfish"
+        width={0}
+        height={0}
+        className="
+          absolute left-[5%] top-[28%]
+          w-[120px] md:w-[140px]
+          -rotate-[10deg] z-[1] select-none pointer-events-none
+          max-sm:hidden
+          sway-more-rev sway-origin-bottom [animation-delay:600ms]
+        "
+      />
+      <Image
+        src="/images/star_fish_2.svg"
+        alt="Starfish"
+        // Filler sizes to make Next.js happy, actual size controlled by CSS
+        width={0}
+        height={0}
+        className="
+          absolute left-[12%] top-[45%]
+          w-[110px] md:w-[130px]
+          z-[1] select-none pointer-events-none
+          max-sm:hidden
+          sway-more-rev sway-origin-bottom [animation-delay:500ms]
+        "
+      />
+      <Image
+        src="/images/blue_shell.svg"
+        alt="Shell"
+        // Filler sizes to make Next.js happy, actual size controlled by CSS
+        width={0}
+        height={0}
+        className="
+          absolute right-[12%] top-[14%]
+          w-[200px] md:w-[180px]
+          z-[1] select-none pointer-events-none
+          max-sm:hidden
+          sway-more-slow sway-origin-top [animation-delay:350ms]
+        "
+      />
+
+      {/* Logo + countdown (still above waves/decors, but below any navbar wrapper) */}
+      <div className="z-[2] text-center grid place-items-center gap-0">
+        <div className="relative w-[520px] h-[520px] drop-shadow-[0_10px_16px_rgba(251,172,204,0.25)] max-lg:w-[420px] max-lg:h-[420px] max-sm:w-[300px] max-sm:h-[300px]">
+          <Image
+            src="/images/logos_5.0/main_logo.svg"
+            alt="MarinaHacks 5.0 logo"
+            fill
+            sizes="(max-width: 640px) 300px, (max-width: 1024px) 420px, 520px"
+            className="sway-more-slow"
+            priority
+          />
         </div>
 
-        {/* Countdown Timer */}
-        <div className="mt-8">
-          <CountdownTimer targetDate="2024-10-26T11:00:00" />
-        </div>
-
-        {/* Additional text */}
-        <div className="text-center space-y-4 mt-8">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-            MarinaHacks 5.0
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 font-medium">
-            Dive into Innovation
-          </p>
+        {/* Timer slightly above logo for overlap, but still low overall */}
+        <div className="z-[3] md:-mt-16">
+          <CountdownTimer targetDate="2025-10-25T10:00:00" />
         </div>
       </div>
-    </div>
-  )
+    </section>
+  );
 }
+
+// targetDate="2025-10-25T10:00:00"

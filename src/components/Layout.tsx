@@ -1,6 +1,6 @@
-import { NavBar, Footer, Landing } from '@/components'
+// import { NavBar, Footer, Landing } from '@/components'
 
-export const Layout = ({ children, showOverlay, setShowOverlay }:any) => {
+export const Layout = ({ children, showOverlay, setShowOverlay }: any) => {
   return (
     <>
       {/* <NavBar showOverlay={showOverlay} setShowOverlay={setShowOverlay}/> */}
@@ -8,5 +8,5 @@ export const Layout = ({ children, showOverlay, setShowOverlay }:any) => {
       <main>{children}</main>
       {/*<Footer />*/}
     </>
-  )
-}
+  );
+};

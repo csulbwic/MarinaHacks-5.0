@@ -1,87 +1,142 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import styles from "@/styles/prizes.module.css";
-import {PrizeBubbleComponent} from "../components/PrizeBubbleComponent"
-import { Prize } from "@/Data/prize"
+import Image from "next/image";
+import { Prize } from "@/Data/prize";
+//import { PrizeBubbleComponent } from "../components/PrizeBubbleComponent";
+import layout from "@/styles/prizesLayout.module.css";
 
-export const Prizes = () => {
+function splitName(name: string) {
+  const parts = name.split("|");
+  if (parts.length >= 2) {
+    return {
+      category: parts[0].trim(),     // e.g., "BEST UI/UX"
+      item: parts.slice(1).join("|").trim(), // the rest after the first |
+    };
+  }
+  return { category: name, item: "" };
+}
+
+// Reusable slot that shows the image in the circle + caption below
+function PrizeSlot({ name, img, className }: { name: string; img: string; className?: string }) {
+  const { category, item } = splitName(name);
+
   return (
-    <section id="prizes" className="py-20 bg-gradient-to-b from-pink-50 to-purple-50 relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Floating sea creatures */}
-        <div className="absolute top-20 left-10 opacity-20 animate-pulse">
-          <Image src="/images/mermaid.png" alt="mermaid" width={60} height={60} />
-        </div>
-        <div className="absolute top-40 right-20 opacity-15 animate-bounce" style={{animationDuration: '4s'}}>
-          <Image src="/images/shell.png" alt="shell" width={40} height={40} />
-        </div>
-        <div className="absolute bottom-40 left-20 opacity-20 animate-pulse" style={{animationDelay: '2s'}}>
-          <Image src="/images/turtle_with_heart.png" alt="turtle" width={50} height={50} />
-        </div>
-        <div className="absolute bottom-20 right-10 opacity-15 animate-bounce" style={{animationDelay: '1s', animationDuration: '3s'}}>
-          <Image src="/images/flower.png" alt="flower" width={45} height={45} />
+    <div className={`${layout.slot} ${className ?? ""}`}>
+      <div className={layout.circle}>
+        <div className={layout.imgBox}>
+          <Image
+            src={img}
+            alt={name}
+            fill
+            className={layout.imgFill}
+            sizes="(max-width: 640px) 180px, (max-width: 1024px) 220px, 260px"
+            priority
+          />
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 relative z-10">
-        {/* Header */}
-        <header className="mb-16 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-gradient-to-r from-pink-200 to-purple-200 text-pink-900 text-sm font-semibold mb-4">
-            🏆 Amazing Prizes
-          </div>
-          <h1 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 bg-clip-text text-transparent mb-4">
-            Prizes & Rewards
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Dive deep and win amazing prizes! Our sponsors have provided incredible rewards for the most innovative projects.
-          </p>
-        </header>
+      <div className={layout.caption}>
+        {item ? (
+          <>
+            <div className={layout.captionTop}>{category}</div>
+            <div className={layout.captionSub}>{item}</div>
+          </>
+        ) : (
+          <div className={layout.captionTop}>{category}</div>
+        )}
+      </div>
+    </div>
+  );
+}
+export const Prizes = () => {
+  // Use the first 4 entries for the four slots
+  const items = Prize.slice(0, 4);
 
-        {/* Category Prizes Grid */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-center text-gray-800 mb-8">Category Prizes</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
-            {Prize.map((item, index) => (
-              <div key={index} className="transform hover:scale-105 transition-transform duration-300">
-                <PrizeBubbleComponent
-                  name={item.name}
-                  img={item.PrizeImg} 
-                />
-              </div>
-            ))}
-          </div>
+  return (
+    <section id="prizes" className="relative pt-6 pb-0 flex flex-col items-center">
+      <h1 className="text-6xl leading-none tracking-tight text-center font-extrabold text-[#FBACCC] mb-0 font-nunito [text-shadow:0px_4px_3px_rgba(0,0,0,0.25)]">
+        Prizes
+      </h1>{/* Center swaying logo */}
+
+      <div className={`${layout.orbitWrap} -mt-8 sm:-mt-10 lg:-mt-12 mb-0`}>
+        <div className={`${layout.center} w-[200px] sm:w-[330px] md:w-[300px] aspect-square`}>
+          <Image
+            src="/images/logos_5.0/main_logo.svg"
+            alt="MarinaHacks 5.0 logo"
+            fill
+            className="sway-more-slow object-contain"
+            priority
+          />
         </div>
 
-        {/* Raffle Prizes Section */}
-        <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-lg">
-          <h3 className="text-2xl font-bold text-center text-gray-800 mb-6">🎟️ Raffle Prizes</h3>
-          <p className="text-center text-gray-600 mb-6">
-            Enter our raffle for a chance to win additional prizes! More details coming soon.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="bg-gradient-to-r from-pink-100 to-purple-100 rounded-2xl p-6 text-center">
-              <div className="text-4xl mb-3">🎁</div>
-              <h4 className="font-bold text-lg text-gray-800">Mystery Prize #1</h4>
-              <p className="text-sm text-gray-600">To be announced!</p>
-            </div>
-            <div className="bg-gradient-to-r from-blue-100 to-cyan-100 rounded-2xl p-6 text-center">
-              <div className="text-4xl mb-3">🎁</div>
-              <h4 className="font-bold text-lg text-gray-800">Mystery Prize #2</h4>
-              <p className="text-sm text-gray-600">To be announced!</p>
-            </div>
-          </div>
+        <Image
+          src="/images/faqStar.png"
+          alt="Shell"
+          width={180}
+          height={180}
+          className="
+          absolute left-[1%] top-[40%]      /* was right-[16%] top-[20%] */
+          w-[150px] md:w-[170px]
+          rotate-[6deg] opacity-90
+          z-0 select-none pointer-events-none
+          max-sm:hidden
+          sway-more-slow sway-origin-top [animation-delay:350ms]
+        "
+          aria-hidden
+          priority
+        />
+
+        <Image
+          src="/images/faqStar.png"
+          alt="Starfish"
+          width={100}
+          height={100}
+          className="
+          absolute right-[2%] bottom-[30%]   /* was right-[4%] bottom-[9%] */
+          w-[120px] md:w-[140px]
+          rotate-[8deg] opacity-90
+          z-0 select-none pointer-events-none
+          max-sm:hidden
+          sway-more-rev sway-origin-bottom [animation-delay:650ms]
+        "
+          aria-hidden
+          priority
+        />
+
+        {/* Top-left */}
+        <div className={layout.q1}>
+          <PrizeSlot
+            name={items[0]?.name ?? "Prize Name"}
+            img={items[0]?.PrizeImg ?? "/images/prizeImg/Camera.png"}
+            className={`${layout.float} ${layout.d1}`}   // <-- sway
+          />
         </div>
 
-        {/* Bottom decorative section */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-4 bg-white/60 backdrop-blur-sm rounded-2xl px-8 py-4 shadow-lg">
-            <Image src="/images/prizeImg/Camera.png" alt="camera" width={40} height={40} className="animate-pulse" />
-            <span className="text-lg font-semibold text-gray-700">More prizes to be announced!</span>
-            <Image src="/images/prizeImg/Headphone.png" alt="headphone" width={40} height={40} className="animate-pulse" style={{animationDelay: '1s'}} />
-          </div>
+        {/* Top-right */}
+        <div className={layout.q2}>
+          <PrizeSlot
+            name={items[1]?.name ?? "Prize Name"}
+            img={items[1]?.PrizeImg ?? "/images/prizeImg/Headphone.png"}
+            className={`${layout.float} ${layout.d2}`}
+          />
+        </div>
+
+        {/* Bottom-left */}
+        <div className={layout.q3}>
+          <PrizeSlot
+            name={items[2]?.name ?? "Prize Name"}
+            img={items[2]?.PrizeImg ?? "/images/prizeImg/Owala.png"}
+            className={`${layout.float} ${layout.d3}`}
+          />
+        </div>
+
+        {/* Bottom-right */}
+        <div className={layout.q4}>
+          <PrizeSlot
+            name={items[3]?.name ?? "Prize Name"}
+            img={items[3]?.PrizeImg ?? "/images/prizeImg/AmazonEchoDot.png"}
+            className={`${layout.float} ${layout.d4}`}
+          />
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

@@ -4,28 +4,20 @@
 
 export const Prize = [
     {
-        name : "BEST UI//UX  | kodak Printomatic Instant Camera",
-        PrizeImg : "/images/prizeImg/Camera.png",
+        name : "BEST OVERALL  | Keyboard & Mouse + Sony Headphones",
+        PrizeImg : "/images/prizeImg/overall_Keyboard_Mouse_Headphones_pink.png",
         
     },
     {
-        name : "BEST HACKER | SONY WH-1000XM5 Wireless Noise",
-        PrizeImg : "/images/prizeImg/Headphone.png"
-    },
-    {
-        name : "BEST SOCIAL GOOD | Owala Bottle + Sticker",
-        PrizeImg : "/images/prizeImg/Owala.png"
-    },
-    {
         name : "BEST ENTERTAINMENT | Amazon Echo Dot",
-        PrizeImg : "/images/prizeImg/AmazonEchoDot.png"
+        PrizeImg : "/images/prizeImg/entertainment_Echodot.png"
     },
     {
-        name : "BEST TECHNICAL | Sceptre E205W 20 Monitor",
-        PrizeImg : "/images/prizeImg/SpectreMonitor.png"
+        name : "BEST TECHNICAL | Arduino Kits",
+        PrizeImg : "/images/prizeImg/technical_Rasberrypikit.png"
     },
     {
-        name : "OVERALL HACK | Logitech Keyboard & Mouse Set",
-        PrizeImg : "/images/prizeImg/LogitechMouse.png"
+        name : "BEST SOCIAL GOOD | Amazon Gift card $50",
+        PrizeImg : "/images/prizeImg/socialgood_Amazongiftcard50.png"
     }
 ]

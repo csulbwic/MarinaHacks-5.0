@@ -1,35 +1,43 @@
-import { Landing, NavBar } from "@/components"
-import { Contact, Faq, Info, Application, Prizes, Pillars, Sponsors, Team, Teaser} from "@/views"
-import Bubbles from "@/components/Bubbles/Bubbles"
-import IdeaGen from "@/components/IdeaGen"
+import Landing from "@/components/Landing";
+import { NavBar } from "@/components/NavBar";
+import { Footer } from "@/components/Footer";
+
+import { Contact, Faq, Info, Prizes, Pillars, Team, Teaser } from "@/views";
 
 export default function Home() {
   return (
     <div>
-      <Bubbles />
-      <NavBar />
-      <Landing />
-      <Info />
-      <Application />
-      <Team />
-      <Pillars />
-      <Prizes/>
-      <IdeaGen />
-      <Faq />
-      <Contact />
+      <div className="bg-[#DFF9FF]">
+        {/* keep navbar on top without changing NavBar.tsx */}
+        <div className="sticky top-0 z-[70]">
+          <NavBar />
+        </div>
+        <Landing />
+        <Info />
+        <Pillars />
+        <Prizes />
+        <Team />
+        <Faq />
+        <Contact />
+        <Footer />
+      </div>
     </div>
-  )
+  );
 }
 
-/*
-<Bubbles />
-<Landing />
-<Info />
-<Application />
-<Team />
-<Pillars />
-<Prizes/>
-<IdeaGen />
-<Faq />
-<Contact />
-*/
+{
+  /*<div className="bg-[#DFF9FF]">
+      {/* keep navbar on top without changing NavBar.tsx *}
+      <div className="sticky top-0 z-[70]">
+        <NavBar />
+      </div>
+      <Landing />
+      <Info />
+      <Team />
+      <Pillars />
+      <Prizes />
+      <Faq/>
+      <Contact/>
+      <Footer/>
+    </div>*/
+}

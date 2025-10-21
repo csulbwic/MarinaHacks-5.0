@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
 .faqContainer {
-    /* background-color: blue; */
+    background-color: #DFF9FF;
     padding-left: 10%;
     padding-right: 10%;
-    padding-top: 10%;
+    padding-top: 5%;
     padding-bottom: 10%;
     text-align: center;
     display: flex;
@@ -14,7 +16,7 @@
     max-width: 1280px;
     padding-left: 5rem;
     padding-right: 5rem;
-    background: #D8D3FF;
+    /* background: #D8D3FF; */
     color: #5A4157;
     padding: 3rem;
     border-radius: 50px;
@@ -27,23 +29,44 @@
 
 
 .questionBox{
-    /* background-color: lightgreen; */
-    padding-bottom: 50px;
-    color: #5A4157;
-    padding: 1.50rem;
+    background: linear-gradient(to top, #DAD9F6 2%, #FBACCC 20% 70%);
+    /* color: #5A4157; */
     border-radius: 20px;
-    margin-top: 0.2rem;
+    margin-top: 0.3rem;
     margin-bottom: 0.75rem;
+    padding-right: 7px;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.25); 
+    padding-bottom: 0%;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.questionBox:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
 }
 
 .questionBoxActive{
-    background-color: white;
+    background: linear-gradient(to top, #DAD9F6 0%, #FBACCC 20% 100%); /* bottom → top */
+    /* box-shadow: 0 6px 0 0 #F5B0C3; */
 }
 
 .answerBox{
     /* background-color: lightcoral; */
-    margin: 0.5rem 0rem;
+    margin: 0;  /* took off the margin because it gave extra space below the <button> making the image not align with the text*/
     text-align: left;
+    padding-bottom: 10px; 
+}
+
+/* added this for the star image on the faqs to not be big --> the image led to the faq box expandng */
+.faqStar {
+    /* display: inline-block; */
+    width: 75px;     /* Adjust this number to make it smaller or larger */
+    height: 75px ; 
+    object-fit: contain; /* Prevent stretching */
+    /* padding-top: 1.25rem;
+    padding-right: 7px; */
+    
 }
 
 
