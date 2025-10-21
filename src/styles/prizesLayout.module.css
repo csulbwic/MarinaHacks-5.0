@@ -184,3 +184,44 @@
   align-items: center;
   width: clamp(160px, 22vw, 220px);
 }
+/* === Mobile stacking for prizes above logo === */
+@media (max-width: 640px) {
+  .orbitWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    aspect-ratio: auto;
+    gap: 12px;
+    padding: 8px 0 16px 0;
+  }
+  /* Place the logo after the prizes */
+  .center {
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+    order: 2;
+    width: 160px !important;
+    height: auto;
+    opacity: 0.15;     /* very faint */
+    z-index: 1;        /* stays behind the stacked prizes */
+    pointer-events: none;
+  }
+  
+  /* Stack each prize block one after another */
+  .q1, .q2, .q3, .q4 {
+    position: static;
+    inset: auto;
+    order: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  /* Make the prize bubble/content fit nicely on mobile */
+  .slot {
+    width: min(92vw, 420px);
+  }
+}
+
