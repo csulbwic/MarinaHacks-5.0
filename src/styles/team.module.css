@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 
 .marinaHacksCommittee {
-  background-color: rgba(242,110,172,1);
+  background-color: '';
 }
 
 .officersCommittee {
-  background-color: rgba(242,110,172,0.8);
+  background-color: '';
 }
 
 .websiteCommittee {
-  background-color: #e9559a;
+  background-color: '';
 }
 
 .designCommittee {
-  background-color: #d26196;
+  background-color: '';
 }
 
 .teamContainer {
@@ -25,11 +25,13 @@
 }
 
 .teamHeading {
-  color: #45494C;
-  font-family: 'Poppins', sans-serif;
+  color: #FBACCC;
+  font-family: 'Nunito', sans-serif;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
   text-align: center;
   font-weight: 800;
 }
+
 
 .teamSubHeading {
   color: #FAFEF7;
@@ -53,10 +55,11 @@
 }
 
 .profilePic {
-  width: 20vw;
-  height: 20vw;
+  width: 10vw;
+  height: 10vw;
   object-fit: cover;
   border-radius: 50%;
+  border: 5px solid #bfe4fb;
   max-width: 200px;
   max-height: 200px;
 }
@@ -75,7 +78,7 @@
 }
 
 .profileRole {
-  color: #FAFEF7;
+  color: #46494C;
   text-align: center;
   font-size: 0.7rem;
   font-weight: 700;

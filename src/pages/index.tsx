@@ -15,9 +15,9 @@ export default function Home() {
         </div>
         <Landing />
         <Info />
-        <Team />
         <Pillars />
         <Prizes />
+        <Team />
         <Faq />
         <Contact />
         <Footer />

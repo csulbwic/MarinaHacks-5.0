@@ -17,9 +17,9 @@ export const NavBar = () => {
   const navButtons = [
     { label: "Home", href: "/#home" },
     { label: "About", href: "/#about" },
-    { label: "Teams", href: "/#teams" },
     { label: "Pillars", href: "/#pillars" },
     { label: "Prizes", href: "/#prizes" },
+    { label: "Teams", href: "/#teams" },
     { label: "FAQ", href: "/#faq" },
     { label: "Contact", href: "/#contacts" },
   ];
