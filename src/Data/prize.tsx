@@ -13,7 +13,7 @@ export const Prize = [
         PrizeImg : "/images/prizeImg/entertainment_Echodot.png"
     },
     {
-        name : "BEST TECHNICAL | Rasberry pi",
+        name : "BEST TECHNICAL | Arduino Kits",
         PrizeImg : "/images/prizeImg/technical_Rasberrypikit.png"
     },
     {
