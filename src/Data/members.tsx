@@ -40,8 +40,8 @@ export const members = [
   { name: 'Danniella M.',  group: 3, role: 'Member',           committeeType: 'website',  img: '/Team_Photos/Danniella_Martinez.JPG' },
   { name: 'Deanna S.',     group: 3, role: 'Member',           committeeType: 'website',  img: '/Team_Photos/Deanna_Solis.JPG' },
   { name: 'Krisha H.',     group: 3, role: 'Member',           committeeType: 'website',  img: '/Team_Photos/Krisha_H.JPG' },
-  { name: 'Shreenithi T.', group: 3, role: 'Member',           committeeType: 'website', img:'' },
-  { name: 'Bryan C.',      group: 3, role: 'Member',           committeeType: 'website', img:'' },
+  { name: 'Shreenithi T.', group: 3, role: 'Member',           committeeType: 'website', img:'/images/logos_5.0/main_logo.svg' },
+  { name: 'Bryan C.',      group: 3, role: 'Member',           committeeType: 'website', img:'/images/logos_5.0/main_logo.svg' },
 
   // ===== DESIGN (Group 4) =====
   { name: 'Anita D.',      group: 4, role: 'Design Co-Lead',   committeeType: 'designer', img: '/Team_Photos/Anita_D.JPG' },

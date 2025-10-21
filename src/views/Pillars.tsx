@@ -3,7 +3,7 @@ import React from "react";
 type Pillar = { title: string; description: string; color: string};
 
 const DATA: Pillar[] = [
-  { title: "Best Overall", description: "Most memorable and favorite project!", color: "#f47ae0ff"},
+  { title: "Best Overall", description: "Most memorable and favorite project!", color: "#df8ed1ff"},
   {
     title: "Best Social Good",
     description:

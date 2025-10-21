@@ -170,6 +170,9 @@ a {
   scroll-margin-top: 0px; 
 }
 
+[id] {
+  scroll-margin-top: 100px; /* Adjust to your fixed navbar height */
+}
 
 @layer utilities {
   /* gentle bob+sway */

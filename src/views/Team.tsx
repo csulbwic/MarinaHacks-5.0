@@ -1,30 +1,39 @@
 import { members } from "@/Data/members"
 import { Profile } from "@/components"
 import styles from "@/styles/team.module.css";
+import Image from "next/image";
+
+/*
+GROUP 1: Directors
+GROUP 2: WiC Officers
+GROUP 3: Website Committee
+GROUP 4: Design Committee
+GROUP 5: Sponsorship Committee
+*/
 
 export const Team = () => {
     return (
       <div id ="teams" className={styles.teamContainer}>
-
-         <h1 className={`${styles.teamHeading} text-5xl mb-20`}>MarinaHacks Team</h1>
-         <div>
-            <div className={styles.websiteCommitteeWrap}>
-                {/* DIRECTORS GRAPHICS */}
-                <img
-                    src="/images/teams_graphics/directors_graphics2.svg"    
-                    alt="Directors"
-                    className={`${styles.websiteBG} -mb-80`}
-                />
-            </div>
-
-            {/* MARINAHACKS DIRECTORS */}
-            <img
+        <h1 className={`${styles.teamHeading} text-5xl mb-10`}>Meet the Team</h1>
+        
+        {/* DIRECTORS - BACKGROUND */}
+        <section id="directors"
+        className="relative overflow-visible flex flex-col items-center min-h-[500px] md:min-h-[500px]
+        bg-[url('/images/teams_graphics/directors_graphics2.svg')]
+        bg-no-repeat bg-contain bg-center">
+            
+            {/* TITLE */}
+            <div>
+              <Image
                 src="/images/teams_graphics/directors_title.svg"    
                 alt="Directors"
-                className={`${styles.committeeImage} -mb-80`}
+                width={350}
+                height={250}
+                className=""
             />
+            </div>
 
-            <div className={`${styles.memberContainer} mb-20`}>
+            <div className={`${styles.memberGrid}`}>
                 {/* Map Members of group member only */}
                 {members.filter((member) => member.group === 1).map((item, index) => {
                 return (
@@ -34,31 +43,30 @@ export const Team = () => {
                         img={item.img} 
                         key={index}
                         committeeType="marinaHacksCommittee"
-                            />
+                    />
                 )
                 })}
             </div>
-            </div>
+        </section>
         
-        <div className={styles.committeeHeading}>
-
-            <div className={styles.websiteCommitteeWrap}>
-                {/* DESIGN GRAPHICS */}
-                <img
-                    src="/images/teams_graphics/designteam_graphics.svg"    
-                    alt="Design"
-                    className={`${styles.websiteBG} -mb-80`}
-                />
+        {/* DESIGN - BACKGROUND */}
+        <section id="design"
+        className="relative overflow-visible flex flex-col items-center min-h-[500px] md:min-h-[500px]
+        bg-[url('/images/teams_graphics/designteam_graphics.svg')]
+        bg-no-repeat bg-contain bg-center">
+            
+            {/* TITLE */}
+            <div>
+              <Image
+                src="/images/teams_graphics/designteam_title.svg"    
+                alt="Design"
+                width={500}
+                height={250}
+                className=""
+            />
             </div>
 
-            {/* DESIGN TEAM */}
-            <img
-                src="/images/teams_graphics/designteam_title.svg"    
-                alt="Design Team"
-                className={`${styles.committeeImage} mt-40`}
-            />
-            
-            <div className={styles.memberContainer}>
+            <div className={styles.memberGrid}>
                 {/* Map Members of group member only */}
                 {members.filter((member) => member.group === 4).map((item, index) => {
                 return (
@@ -68,30 +76,30 @@ export const Team = () => {
                         img={item.img} 
                         key={index}
                         committeeType="designCommittee"
-                        />
+                    />
                 )
                 })}
             </div>
-        </div>
+        </section>
 
-        <div className={styles.committeeHeading}>
-            <div className={styles.websiteCommitteeWrap}>
-                {/* WEBSITE TEAM GRAPHICS */}
-                <img
-                    src="/images/teams_graphics/websiteteam_graphics.svg"    
-                    alt="Website"
-                    className={`${styles.websiteBG} -mb-80`}
-                />
-            </div>
+        {/* WEBSITE - BACKGROUND */}
+        <section id="website"
+        className="relative overflow-visible flex flex-col items-center min-h-[500px] md:min-h-[500px]
+        bg-[url('/images/teams_graphics/websiteteam_graphics.svg')]
+        bg-no-repeat bg-contain bg-center">
             
-            {/* WEBSITE TEAM */}
-            <img
+            {/* TITLE */}
+            <div>
+              <Image
                 src="/images/teams_graphics/websiteteam_title.svg"    
                 alt="Website"
-                className={`${styles.committeeImage} -mb-80`}
+                width={500}
+                height={250}
+                className="mt-10"
             />
+            </div>
 
-            <div className={styles.memberContainer}>
+            <div className={styles.memberGrid}>
                 {/* Map Members of group member only */}
                 {members.filter((member) => member.group === 3).map((item, index) => {
                 return (
@@ -101,30 +109,31 @@ export const Team = () => {
                         img={item.img} 
                         key={index}
                         committeeType="websiteCommittee"
-                        />
+                    />
                 )
                 })}
             </div>
-        </div>
+        </section>
         
-        <div>
-
-            <div className={styles.websiteCommitteeWrap}>
-                {/* WIC OFFICERS GRAPHICS */}
-                <img
-                    src="/images/teams_graphics/wicofficers_graphics.svg"    
-                    alt="Website"
-                    className={`${styles.websiteBG} -mb-80`}
-                />
+        {/* WIC OFFICERS - BACKGROUND */}
+        <section id="officers"
+        className="relative overflow-visible flex flex-col items-center min-h-[500px] md:min-h-[500px]
+        bg-[url('/images/teams_graphics/wicofficers_graphics.svg')]
+        bg-no-repeat bg-contain bg-center">
+            
+            {/* TITLE */}
+            <div>
+              <Image
+                src="/images/teams_graphics/wicofficers_title.svg"    
+                alt="WICOfficers"
+                width={800}
+                height={250}
+                className="mt-20"
+            />
             </div>
 
-            <div className={styles.memberContainer}>
-                {/* WOMEN IN COMPUTING OFFICER */}
-                <img
-                    src="/images/teams_graphics/wicofficers_title.svg"    
-                    alt="Officers"
-                    className={`${styles.committeeImage} -mb-40`}
-                />
+            <div className={styles.memberGrid}
+            style={ {maxWidth:"2000px"}}>
                 {/* Map Members of group member only */}
                 {members.filter((member) => member.group === 2).map((item, index) => {
                 return (
@@ -133,12 +142,12 @@ export const Team = () => {
                         role={item.role} 
                         img={item.img} 
                         key={index}
-                        committeeType="officersCommittee"
-                            />
+                        committeeType="officer"
+                    />
                 )
                 })}
             </div>
-        </div>
+        </section>
       </div>
     )
   }
