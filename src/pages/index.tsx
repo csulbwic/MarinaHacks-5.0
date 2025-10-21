@@ -1,7 +1,6 @@
 import Landing from "@/components/Landing";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
-import Bubbles from "@/components/Bubbles/Bubbles";
 
 import { Contact, Faq, Info, Prizes, Pillars, Team, Teaser } from "@/views";
 
