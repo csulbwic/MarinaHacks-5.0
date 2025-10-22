@@ -47,18 +47,17 @@ export const members = [
   // ===== DESIGN (Group 4) =====
   { name: 'Anita D.',      group: 4, role: 'Design Co-Lead',   committeeType: 'designer', img: '/Team_Photos/Anita_D.JPG' },
   { name: 'Warissa H.',    group: 4, role: 'Design Co-Lead',   committeeType: 'designer', img: '/Team_Photos/Warissa_Hossain.JPG' },
-
-  { name: 'Hollie T.',     group: 4, role: 'Member',           committeeType: 'designer', img: '/Team_Photos/Hollie_Tran.JPG' },
-  { name: 'Dhara S.',      group: 4, role: 'Member',           committeeType: 'designer', img: '/Team_Photos/Dhara_Shah.JPG' },
-  { name: 'Celina T.',     group: 4, role: 'Member',           committeeType: 'designer', img: '/Team_Photos/Celina_Tong.JPG' },
   { name: 'Mishka M.',     group: 4, role: 'Member',           committeeType: 'designer',  img: '/Team_Photos/Mishka_Mansukhani.JPG' },
+  { name: 'Hollie T.',     group: 4, role: 'Member',           committeeType: 'designer', img: '/Team_Photos/Hollie_Tran.JPG' },
+  { name: 'Celina T.',     group: 4, role: 'Member',           committeeType: 'designer', img: '/Team_Photos/Celina_Tong.JPG' },
+  { name: 'Dhara S.',      group: 4, role: 'Member',           committeeType: 'designer', img: '/Team_Photos/Dhara_Shah.JPG' },
+  { name: 'Rikhi J.',      group: 4, role: 'Member',           committeeType: 'designer',  img: '/images/logos_5.0/main_logo.svg' },
 
   // ===== SPONSORSHIP (Group 5) =====
   { name: 'Christina P.',  group: 5, role: 'Sponsorship Lead', committeeType: 'sponsorship', img: '/Team_Photos/Christina_Peralta.JPG' },
-
   { name: 'Mindy Y.',      group: 5, role: 'Member',           committeeType: 'sponsorship', img: '/Team_Photos/Mindy_Yun.JPG' },
   { name: 'Zarya A.',      group: 5, role: 'Member',           committeeType: 'sponsorship', img: '/Team_Photos/ZaryaAmin.jpeg' },
+  { name: 'Sara T.',       group: 5, role: 'Member',           committeeType: 'sponsorship', img: '/Team_Photos/Sara_Tfaili.JPG' },
   { name: 'Antonio L.',    group: 5, role: 'Member',           committeeType: 'sponsorship', img:'/images/logos_5.0/main_logo.svg' },
   { name: 'Brittanys T.',  group: 5, role: 'Member',           committeeType: 'sponsorship', img: '/images/logos_5.0/main_logo.svg'},
-  { name: 'Sara T.',       group: 5, role: 'Member',           committeeType: 'sponsorship', img: '/Team_Photos/Sara_Tfaili.JPG' },
 ];

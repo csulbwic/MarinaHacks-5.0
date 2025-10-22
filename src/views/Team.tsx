@@ -66,7 +66,8 @@ export const Team = () => {
             />
             </div>
 
-            <div className={styles.memberGrid}>
+            <div className={styles.memberGrid}
+            style={ {maxWidth:"1000px"}}>
                 {/* Map Members of group member only */}
                 {members.filter((member) => member.group === 4).map((item, index) => {
                 return (
@@ -95,11 +96,12 @@ export const Team = () => {
                 alt="Website"
                 width={500}
                 height={250}
-                className="mt-10"
+                className="mt-20"
             />
             </div>
 
-            <div className={styles.memberGrid}>
+            <div className={styles.memberGrid}
+            style={ {maxWidth:"1000px"}}>
                 {/* Map Members of group member only */}
                 {members.filter((member) => member.group === 3).map((item, index) => {
                 return (
@@ -109,6 +111,39 @@ export const Team = () => {
                         img={item.img} 
                         key={index}
                         committeeType="websiteCommittee"
+                    />
+                )
+                })}
+            </div>
+        </section>
+
+        {/* SPONSORSHIP - BACKGROUND */}
+        <section id="sponsorship"
+        className="relative overflow-visible flex flex-col items-center min-h-[500px] md:min-h-[500px]
+        bg-[url('/images/teams_graphics/sponsorship_graphics.svg')]
+        bg-no-repeat bg-contain bg-center">
+            
+            {/* TITLE */}
+            <div>
+              <Image
+                src="/images/teams_graphics/sponsorship_title.svg"    
+                alt="Sponsorship"
+                width={700}
+                height={250}
+                className="mt-20"
+            />
+            </div>
+
+            <div className={styles.memberGrid}>
+                {/* Map Members of group member only */}
+                {members.filter((member) => member.group === 5).map((item, index) => {
+                return (
+                    <Profile 
+                        name={item.name} 
+                        role={item.role} 
+                        img={item.img} 
+                        key={index}
+                        committeeType="sponsorshipCommittee"
                     />
                 )
                 })}
