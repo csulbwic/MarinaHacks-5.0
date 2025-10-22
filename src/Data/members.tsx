@@ -21,6 +21,7 @@ export const members = [
   { name: 'Shishira S.',   group: 2, role: 'Industry Chair',  committeeType: 'officer',  img: '/Team_Photos/ShishiraShashidhar.png' },
   { name: 'Stacy M.',      group: 2, role: 'Event Coordinator', committeeType: 'officer',  img: '/Team_Photos/StacyMazariego.jpeg' },
   { name: 'Christina P.',  group: 2, role: 'AESB Representative', committeeType: 'officer',  img: '/Team_Photos/Christina_Peralta.JPG' },
+  { name: 'Emma T.',       group: 2, role: 'AESB Representative', committeeType: 'officer',  img: '/images/logos_5.0/main_logo.svg' },
   { name: 'Anna G.',       group: 2, role: 'Webmaster',       committeeType: 'officer',  img: '/Team_Photos/Anna_Gelisanga.JPG' },
   { name: 'Tessa H.',      group: 2, role: 'Co-Social Media Coordinator', committeeType: 'officer',  img: '/Team_Photos/Tessa_Holder.jpg' },
   { name: 'Thrity G.',     group: 2, role: 'Co-Social Media Coordinator', committeeType: 'officer',  img: '/Team_Photos/Thrity_Golzari.JPG' },
@@ -28,7 +29,7 @@ export const members = [
   { name: 'Warissa H.',    group: 2, role: 'Graphic Design Coordinator', committeeType: 'officer',  img: '/Team_Photos/Warissa_Hossain.JPG' },
   { name: 'Amanda G.',     group: 2, role: 'School Outreach Coordinator', committeeType: 'officer',  img: '/Team_Photos/Amanda_Gantugs.JPG' },
   { name: 'Peter T.',      group: 2, role: 'School Outreach Coordinator', committeeType: 'officer',  img: '/Team_Photos/Peter_Tran.png' },
-  { name: 'Mia C.',        group: 2, role: 'Sisterhood Coordinator', committeeType: 'officer',  img: '/Team_Photos/MiaCarter.jpg' },
+  { name: 'Mia C.',        group: 2, role: 'School Outreach Coordinator', committeeType: 'officer',  img: '/Team_Photos/MiaCarter.jpg' },
   { name: 'Belle L.',      group: 2, role: 'Sisterhood Coordinator', committeeType: 'officer',  img: '/Team_Photos/Belle_Lopez.jpeg' },
   { name: 'Lexi N.',       group: 2, role: 'Sisterhood Coordinator', committeeType: 'officer',  img: '/Team_Photos/Lexi_N_4.0.JPG' },
 
@@ -57,7 +58,7 @@ export const members = [
 
   { name: 'Mindy Y.',      group: 5, role: 'Member',           committeeType: 'sponsorship', img: '/Team_Photos/Mindy_Yun.JPG' },
   { name: 'Zarya A.',      group: 5, role: 'Member',           committeeType: 'sponsorship', img: '/Team_Photos/ZaryaAmin.jpeg' },
-  { name: 'Antonio L.',    group: 5, role: 'Member',           committeeType: 'sponsorship', img:'' },
-  { name: 'Brittanys T.',  group: 5, role: 'Member',           committeeType: 'sponsorship', img: ''},
+  { name: 'Antonio L.',    group: 5, role: 'Member',           committeeType: 'sponsorship', img:'/images/logos_5.0/main_logo.svg' },
+  { name: 'Brittanys T.',  group: 5, role: 'Member',           committeeType: 'sponsorship', img: '/images/logos_5.0/main_logo.svg'},
   { name: 'Sara T.',       group: 5, role: 'Member',           committeeType: 'sponsorship', img: '/Team_Photos/Sara_Tfaili.JPG' },
 ];
