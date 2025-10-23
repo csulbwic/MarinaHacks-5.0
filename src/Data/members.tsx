@@ -32,6 +32,7 @@ export const members = [
   { name: 'Mia C.',        group: 2, role: 'School Outreach Coordinator', committeeType: 'officer',  img: '/Team_Photos/MiaCarter.jpg' },
   { name: 'Belle L.',      group: 2, role: 'Sisterhood Coordinator', committeeType: 'officer',  img: '/Team_Photos/Belle_Lopez.jpeg' },
   { name: 'Lexi N.',       group: 2, role: 'Sisterhood Coordinator', committeeType: 'officer',  img: '/Team_Photos/Lexi_N_4.0.JPG' },
+  { name: 'Gaurav P.',     group: 2, role: 'Consultant', committeeType: 'officer',  img: '/Team_Photos/Gaurav_P.jpg' },
 
   // ===== WEBSITE (Group 3) =====
   { name: 'Anna G.',       group: 3, role: 'Website Co-Lead',  committeeType: 'website',  img: '/Team_Photos/Anna_Gelisanga.JPG' },
