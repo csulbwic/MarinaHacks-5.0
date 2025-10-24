@@ -52,7 +52,6 @@ export const members = [
   { name: 'Hollie T.',     group: 4, role: 'Member',           committeeType: 'designer', img: '/Team_Photos/Hollie_Tran.JPG' },
   { name: 'Celina T.',     group: 4, role: 'Member',           committeeType: 'designer', img: '/Team_Photos/Celina_Tong.JPG' },
   { name: 'Dhara S.',      group: 4, role: 'Member',           committeeType: 'designer', img: '/Team_Photos/Dhara_Shah.JPG' },
-  { name: 'Rikhi J.',      group: 4, role: 'Member',           committeeType: 'designer',  img: '/images/logos_5.0/main_logo.svg' },
 
   // ===== SPONSORSHIP (Group 5) =====
   { name: 'Christina P.',  group: 5, role: 'Sponsorship Lead', committeeType: 'sponsorship', img: '/Team_Photos/Christina_Peralta.JPG' },

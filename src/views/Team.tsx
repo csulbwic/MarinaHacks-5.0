@@ -67,7 +67,7 @@ export const Team = () => {
             </div>
 
             <div className={styles.memberGrid}
-            style={ {maxWidth:"1000px"}}>
+            style={ {maxWidth:"1100px"}}>
                 {/* Map Members of group member only */}
                 {members.filter((member) => member.group === 4).map((item, index) => {
                 return (
